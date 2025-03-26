@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyRealm - {{CATEGORY_NAME}} Games</title>
+    <meta name="description" content="Explore the best {{CATEGORY_NAME}} games on JoyRealm. Play free online games without downloads.">
+    <link rel="canonical" href="https://joyrealm.org/categories/{{CATEGORY_SLUG}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="relative min-h-screen">
+    <div class="star-bg"></div>
+    
+    <header class="py-6 px-4 md:px-8 lg:px-16" id="header-container">
+        <!-- 页头将通过JavaScript动态加载 -->
+    </header>
+    
+    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
+        <!-- 分类标题 -->
+        <section class="text-center mb-16">
+            <h1 class="jojo-title text-4xl md:text-5xl lg:text-6xl mb-4">{{CATEGORY_NAME}} GAMES</h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Discover the best {{CATEGORY_NAME}} games on JoyRealm!</p>
+        </section>
+        
+        <!-- 广告位：顶部横幅 -->
+        <div class="ad-container ad-banner-top w-full h-24 bg-gray-800 bg-opacity-50 flex items-center justify-center mb-8 border border-dashed border-gray-600">
+            <p class="text-gray-400">广告位：顶部横幅</p>
+        </div>
+        
+        <!-- 游戏列表 -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="games-container">
+                <!-- 游戏卡片将通过JavaScript动态加载 -->
+                <!-- 游戏卡片模板 -->
+                <div class="game-card bg-gray-800 bg-opacity-70 rounded-lg overflow-hidden transition-transform hover:transform hover:scale-105">
+                    <div class="relative">
+                        <img src="/assets/images/games/placeholder.jpg" alt="Game Title" class="w-full aspect-video object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-500 text-black font-bold px-2 py-1 rounded text-xs">HOT</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-yellow-400 mb-2">Game Title</h3>
+                        <p class="text-sm text-gray-300 mb-3 line-clamp-2">Short description of the game goes here. This is a placeholder text.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-400">Action, Adventure</span>
+                            <a href="/games/game-slug" class="btn-play text-xs py-1 px-3">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 广告位：列表间隔 -->
+                <div class="ad-container ad-in-list w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center border border-dashed border-gray-600">
+                    <p class="text-gray-400">广告位：列表间隔</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 广告位：底部横幅 -->
+        <div class="ad-container ad-banner-bottom w-full h-24 bg-gray-800 bg-opacity-50 flex items-center justify-center mb-8 border border-dashed border-gray-600">
+            <p class="text-gray-400">广告位：底部横幅</p>
+        </div>
+    </main>
+    
+    <footer class="bg-black bg-opacity-50 py-8 px-4 md:px-8 lg:px-16" id="footer-container">
+        <!-- 页脚将通过JavaScript动态加载 -->
+    </footer>
+    
+    <script src="/assets/js/components.js"></script>
+    <script src="/assets/js/games.js"></script>
+    <script>
+        // 加载特定分类的游戏
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCategoryGames('{{CATEGORY_SLUG}}');
+        });
+    </script>
+</body>
+</html>

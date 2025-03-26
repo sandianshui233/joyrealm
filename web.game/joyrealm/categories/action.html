@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyRealm - Action Games</title>
+    <meta name="description" content="Explore the best Action games on JoyRealm. Play free online games without downloads.">
+    <link rel="canonical" href="https://joyrealm.org/categories/action">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="relative min-h-screen">
+    <div class="star-bg"></div>
+    
+    <header class="py-6 px-4 md:px-8 lg:px-16" id="header-container">
+        <!-- 页头将通过JavaScript动态加载 -->
+    </header>
+    
+    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
+        <!-- 分类标题 -->
+        <section class="text-center mb-16">
+            <h1 class="jojo-title text-4xl md:text-5xl lg:text-6xl mb-4">ACTION GAMES</h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Discover the best Action games on JoyRealm!</p>
+        </section>
+        
+        <!-- 广告位：顶部横幅 -->
+        <div class="ad-container ad-banner-top w-full h-24 bg-gray-800 bg-opacity-50 flex items-center justify-center mb-8 border border-dashed border-gray-600">
+            <p class="text-gray-400">广告位：顶部横幅</p>
+        </div>
+        
+        <!-- 游戏列表 -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="games-container">
+                <!-- 这里将通过JavaScript动态加载游戏卡片 -->
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-black bg-opacity-50 py-8 px-4 md:px-8 lg:px-16" id="footer-container">
+        <!-- 页脚将通过JavaScript动态加载 -->
+    </footer>
+    
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/games.js"></script>
+    <script>
+        // 加载特定分类的游戏
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCategoryGames('action');
+        });
+    </script>
+</body>
+</html>
