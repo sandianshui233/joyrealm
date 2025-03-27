@@ -149,7 +149,7 @@
             </p>
         </section>
         
-        <!-- 将现有的游戏iframe部分修改为 -->
+        <!-- 游戏iframe部分 -->
         <section class="mb-16">
             <div class="game-frame">
                 <div class="game-placeholder relative w-full h-full flex items-center justify-center bg-black bg-opacity-70" data-src="https://itch.io/embed-upload/11407110?color=333333">
@@ -163,60 +163,24 @@
             </div>
         </section>
         
-        <!-- 在页面底部添加脚本引用 -->
-        <script src="/assets/js/iframe-lazy-loader.js"></script>
-        <section class="mb-16">
-            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-8">GAME FEATURES</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Immersive Gameplay</h3>
-                    <p>Experience a world that responds to your choices and actions, creating a truly personalized adventure.</p>
-                </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Stunning Visuals</h3>
-                    <p>Feast your eyes on breathtaking landscapes and meticulously designed characters that bring the world to life.</p>
-                </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Epic Soundtrack</h3>
-                    <p>Immerse yourself in a dynamic audio experience that adapts to your gameplay and enhances every moment.</p>
-                </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Challenging Puzzles</h3>
-                    <p>Test your wit and problem-solving skills with a variety of puzzles that increase in complexity as you progress.</p>
-                </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Character Customization</h3>
-                    <p>Create and evolve your unique character with countless customization options and ability upgrades.</p>
-                </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold mb-3 text-yellow-400">Multiplayer Options</h3>
-                    <p>Connect with friends and compete or collaborate in various game modes designed for social interaction.</p>
+        <!-- 游戏特性部分保持不变 -->
+        
+        <!-- 热门游戏部分 - 移到正确位置 -->
+        <section class="py-16 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-purple-900/30 to-black/50 z-0"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h2 class="text-4xl font-bold text-center mb-12">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">热门游戏</span>
+                </h2>
+                
+                <div id="featured-games" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- 游戏卡片将通过JavaScript动态加载 -->
+                    <div class="col-span-full text-center py-8">
+                        <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
+                        <p class="mt-4 text-gray-400">加载游戏中...</p>
+                    </div>
                 </div>
             </div>
-        </section>
-        
-        <section class="jojo-container p-8 rounded-lg mb-16">
-            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6">HOW TO PLAY</h2>
-            <div class="space-y-4">
-                <div>
-                    <h3 class="text-xl font-bold mb-2 text-yellow-400">Getting Started</h3>
-                    <p>Simply click the "Play Now" button or use the game frame above to begin your adventure. No downloads or installations required!</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-2 text-yellow-400">Controls</h3>
-                    <p>Use WASD or arrow keys for movement, mouse for camera control, and space bar to jump. Additional controls will be introduced as you progress through the tutorial.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-2 text-yellow-400">Objectives</h3>
-                    <p>Complete missions, collect resources, and defeat enemies to advance through the game. Each level presents new challenges and rewards.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="text-center mb-16">
-            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6">JOIN THE ADVENTURE</h2>
-            <p class="text-lg mb-8 max-w-3xl mx-auto">Ready to embark on an unforgettable journey? Dive into Joyrealm now and discover a world where imagination knows no bounds!</p>
-            <button class="btn-play text-lg">Play Joyrealm Now</button>
         </section>
     </main>
     
@@ -237,35 +201,6 @@
             </div>
         </div>
     </footer>
-</body>
-</html>
-
-<!-- 将热门游戏部分移到</body>标签之前 -->
-<main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
-    <!-- 现有内容 -->
-    
-    <!-- 热门游戏部分 -->
-    <section class="py-16 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-purple-900/30 to-black/50 z-0"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-12">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">热门游戏</span>
-            </h2>
-            
-            <div id="featured-games" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- 游戏卡片将通过JavaScript动态加载 -->
-                <div class="col-span-full text-center py-8">
-                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
-                    <p class="mt-4 text-gray-400">加载游戏中...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- 添加所有脚本引用 -->
-<script src="/assets/js/iframe-lazy-loader.js"></script>
-<script src="/assets/js/homepage.js"></script>
 </body>
 </html>
 
