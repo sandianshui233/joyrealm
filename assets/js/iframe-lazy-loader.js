@@ -23,6 +23,15 @@ function initIframeLazyLoading() {
                 placeholder.classList.add('game-loaded');
             });
         }
+        
+        // 处理外部链接按钮
+        const externalLinks = placeholder.querySelectorAll('a[href]');
+        externalLinks.forEach(link => {
+            // 确保链接有正确的target属性
+            if (!link.getAttribute('target')) {
+                link.setAttribute('target', '_blank');
+            }
+        });
     });
 }
 
