@@ -2,42 +2,20 @@
 function initIframeLazyLoading() {
     console.log('初始化iframe懒加载...');
     
+    // 检查页面上是否已经有iframe
+    const existingIframes = document.querySelectorAll('iframe');
+    if (existingIframes.length > 0) {
+        console.log('页面已存在iframe，跳过懒加载');
+        return;
+    }
+    
     // 获取所有带有data-src属性的iframe占位符
     const placeholders = document.querySelectorAll('.game-placeholder');
     console.log('找到占位符数量:', placeholders.length);
     
-    // 如果没有找到占位符但有游戏框架，尝试直接加载iframe
+    // 如果没有找到占位符，直接返回，不尝试创建iframe
     if (placeholders.length === 0) {
-        const gameFrames = document.querySelectorAll('.game-frame');
-        if (gameFrames.length > 0 && !gameFrames[0].querySelector('iframe')) {
-            console.log('未找到占位符，但找到游戏框架，尝试直接加载iframe');
-            
-            // 检查是否已经有iframe
-            const existingIframe = gameFrames[0].querySelector('iframe');
-            if (!existingIframe) {
-                // 从games.json获取游戏数据
-                fetch('data/games.json')
-                    .then(response => response.json())
-                    .then(games => {
-                        if (games && games.length > 0) {
-                            const game = games[0]; // 使用第一个游戏
-                            const iframe = document.createElement('iframe');
-                            iframe.src = game.embedSrc || "https://itch.io/embed/[游戏ID]?border_width=0&bg_color=333333&fg_color=ffffff&link_color=fa5c5c&border_color=333333";
-                            iframe.width = '100%';
-                            iframe.height = '100%';
-                            iframe.frameBorder = '0';
-                            iframe.allowFullscreen = true;
-                            
-                            gameFrames[0].innerHTML = '';
-                            gameFrames[0].appendChild(iframe);
-                            console.log('已创建游戏iframe:', game.title);
-                        }
-                    })
-                    .catch(error => {
-                        console.error('加载游戏数据失败:', error);
-                    });
-            }
-        }
+        console.log('未找到游戏占位符，跳过懒加载');
         return;
     }
     
@@ -90,14 +68,19 @@ function initIframeLazyLoading() {
     });
 }
 
-// 页面加载完成后初始化
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM加载完成，初始化iframe懒加载');
-    initIframeLazyLoading();
-});
-
 // 如果DOMContentLoaded已经触发，立即执行
 if (document.readyState === 'interactive' || document.readyState === 'complete') {
     console.log('页面已加载，立即初始化iframe懒加载');
     initIframeLazyLoading();
 }
+
+// 示例：在游戏列表页面中启用懒加载
+<script src="../assets/js/iframe-lazy-loader.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 只在游戏列表页面调用懒加载
+        if (window.location.pathname.includes('/categories/')) {
+            initIframeLazyLoading();
+        }
+    });
+</script>
