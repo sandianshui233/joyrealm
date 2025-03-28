@@ -56,9 +56,10 @@
             border-radius: 8px;
             overflow: hidden;
             width: 100%;
-            aspect-ratio: 16/9;
+            aspect-ratio: 16/9; /* 可以改为其他比例如4/3或直接设置固定高度 */
             max-width: 1000px;
             margin: 0 auto;
+            height: 600px; /* 添加固定高度 */
         }
         
         .game-frame iframe {
@@ -152,15 +153,15 @@
         <!-- 游戏iframe部分 -->
         <section class="mb-16">
             <div class="game-frame">
-                <div class="game-placeholder relative w-full h-full flex items-center justify-center bg-black bg-opacity-70" data-src="https://itch.io/embed-upload/11407110?color=333333">
-                    <div class="text-center p-8">
-                        <img src="https://img.itch.zone/aW1nLzE3Njg0NDI5LmpwZWc=/315x250%23c/DFtblS.jpeg" alt="Incredibox - Sprunki" class="max-h-48 mx-auto mb-4 rounded">
-                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">Incredibox - Sprunki</h3>
-                        <p class="text-gray-300 mb-4">点击下方按钮加载游戏</p>
-                        <a href="https://itch.io/embed-upload/11407110?color=333333" target="_blank" class="btn-play text-lg mr-2">在 itch.io 上玩</a>
-                        <a href="https://www.youtube.com" target="_blank" class="btn-play text-lg">在 YouTube 上看</a>
-                    </div>
-                </div>
+                <!-- 直接使用iframe而不是占位符，避免itch.io警告 -->
+                <iframe 
+                    frameborder="0" 
+                    src="https://itch.io/embed-upload/11407110?color=333333" 
+                    allowfullscreen="" 
+                    width="100%" 
+                    height="100%">
+                    <a href="https://incredibox.itch.io/sprunki">Play Incredibox - Sprunki on itch.io</a>
+                </iframe>
             </div>
         </section>
         
@@ -202,18 +203,22 @@
             </div>
         </div>
     </footer>
-    <!-- 在 </body> 标签前添加以下脚本引用 -->
+    <!-- 删除这里的脚本引用和额外的</body>标签 -->
     <script src="assets/js/iframe-lazy-loader.js"></script>
     <script src="assets/js/homepage.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 初始化iframe懒加载
-            initIframeLazyLoading();
+            if (typeof initIframeLazyLoading === 'function') {
+                initIframeLazyLoading();
+            }
             // 加载热门游戏
-            loadFeaturedGames();
+            if (typeof loadFeaturedGames === 'function') {
+                loadFeaturedGames();
+            }
         });
     </script>
-</body>
-</html>
+    </body>
+    </html>
 
 
