@@ -41,16 +41,10 @@
         
         <!-- 游戏iframe部分 -->
         <section class="mb-16">
-            <div class="game-frame">
-                <!-- 直接使用iframe而不是占位符，避免itch.io警告 -->
-                <iframe 
-                    frameborder="0" 
-                    src="https://itch.io/embed-upload/11407110?color=333333" 
-                    allowfullscreen="" 
-                    width="100%" 
-                    height="100%">
-                    <a href="https://incredibox.itch.io/sprunki">Play Incredibox - Sprunki on itch.io</a>
-                </iframe>
+            <div class="game-frame game-placeholder" data-src="https://itch.io/embed/[游戏ID]?border_width=0&bg_color=333333&fg_color=ffffff&link_color=fa5c5c&border_color=333333">
+                <div class="game-loading text-center py-12">
+                    <button class="load-game-btn jojo-button px-8 py-4">加载游戏</button>
+                </div>
             </div>
         </section>
         

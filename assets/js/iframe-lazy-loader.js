@@ -22,7 +22,7 @@ function initIframeLazyLoading() {
                         if (games && games.length > 0) {
                             const game = games[0]; // 使用第一个游戏
                             const iframe = document.createElement('iframe');
-                            iframe.src = game.embedSrc || "https://itch.io/embed-upload/11407110?color=333333";
+                            iframe.src = game.embedSrc || "https://itch.io/embed/[游戏ID]?border_width=0&bg_color=333333&fg_color=ffffff&link_color=fa5c5c&border_color=333333";
                             iframe.width = '100%';
                             iframe.height = '100%';
                             iframe.frameBorder = '0';
