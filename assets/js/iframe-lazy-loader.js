@@ -1,11 +1,43 @@
 // iframe懒加载实现
 function initIframeLazyLoading() {
+    console.log('初始化iframe懒加载...');
+    
     // 获取所有带有data-src属性的iframe占位符
     const placeholders = document.querySelectorAll('.game-placeholder');
+    console.log('找到占位符数量:', placeholders.length);
     
+    // 如果没有找到占位符但有游戏框架，尝试直接加载iframe
     if (placeholders.length === 0) {
-        console.log('未找到游戏占位符，尝试创建iframe');
-        createGameIframe();
+        const gameFrames = document.querySelectorAll('.game-frame');
+        if (gameFrames.length > 0 && !gameFrames[0].querySelector('iframe')) {
+            console.log('未找到占位符，但找到游戏框架，尝试直接加载iframe');
+            
+            // 检查是否已经有iframe
+            const existingIframe = gameFrames[0].querySelector('iframe');
+            if (!existingIframe) {
+                // 从games.json获取游戏数据
+                fetch('data/games.json')
+                    .then(response => response.json())
+                    .then(games => {
+                        if (games && games.length > 0) {
+                            const game = games[0]; // 使用第一个游戏
+                            const iframe = document.createElement('iframe');
+                            iframe.src = game.embedSrc || "https://itch.io/embed-upload/11407110?color=333333";
+                            iframe.width = '100%';
+                            iframe.height = '100%';
+                            iframe.frameBorder = '0';
+                            iframe.allowFullscreen = true;
+                            
+                            gameFrames[0].innerHTML = '';
+                            gameFrames[0].appendChild(iframe);
+                            console.log('已创建游戏iframe:', game.title);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('加载游戏数据失败:', error);
+                    });
+            }
+        }
         return;
     }
     
@@ -27,6 +59,7 @@ function initIframeLazyLoading() {
                 placeholder.innerHTML = '';
                 placeholder.appendChild(iframe);
                 placeholder.classList.add('game-loaded');
+                console.log('游戏已加载:', iframeSrc);
             });
         } else if (iframeSrc) {
             // 如果没有加载按钮但有src，自动加载iframe
@@ -54,32 +87,6 @@ function initIframeLazyLoading() {
                 link.setAttribute('target', '_blank');
             }
         });
-    });
-}
-
-// 创建游戏iframe的备用方法
-function createGameIframe() {
-    const gameFrames = document.querySelectorAll('.game-frame');
-    
-    gameFrames.forEach(frame => {
-        // 检查是否已经有iframe
-        if (frame.querySelector('iframe')) {
-            console.log('游戏框架已有iframe，跳过');
-            return;
-        }
-        
-        // 创建新的iframe
-        const iframe = document.createElement('iframe');
-        iframe.src = 'https://itch.io/embed-upload/11407110?color=333333';
-        iframe.width = '100%';
-        iframe.height = '100%';
-        iframe.frameBorder = '0';
-        iframe.allowFullscreen = true;
-        
-        // 清空并添加iframe
-        frame.innerHTML = '';
-        frame.appendChild(iframe);
-        console.log('已创建游戏iframe');
     });
 }
 
