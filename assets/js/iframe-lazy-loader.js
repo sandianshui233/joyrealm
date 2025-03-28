@@ -68,12 +68,6 @@ function initIframeLazyLoading() {
     });
 }
 
-// 如果DOMContentLoaded已经触发，立即执行
-if (document.readyState === 'interactive' || document.readyState === 'complete') {
-    console.log('页面已加载，立即初始化iframe懒加载');
-    initIframeLazyLoading();
-}
-
 // 示例：在游戏列表页面中启用懒加载
 <script src="../assets/js/iframe-lazy-loader.js"></script>
 <script>
