@@ -1,0 +1,453 @@
+/* 街机柜式布局样式 */
+:root {
+  --neon-yellow: #ffff00;
+  --neon-pink: #ff00ff;
+  --neon-blue: #00ffff;
+  --neon-green: #00ff00;
+  --dark-bg: #0a0a0a;
+  --arcade-dark: #121212;
+  --arcade-light: #2a2a2a;
+}
+
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  background-color: var(--dark-bg);
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 2px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px;
+  background-position: 0 0, 25px 25px;
+}
+
+/* CRT屏幕效果 */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* 霓虹文字效果 */
+.neon-text {
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px var(--neon-blue),
+    0 0 20px var(--neon-blue),
+    0 0 25px var(--neon-blue);
+}
+
+.neon-yellow {
+  color: var(--neon-yellow);
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px var(--neon-yellow),
+    0 0 20px var(--neon-yellow),
+    0 0 25px var(--neon-yellow);
+}
+
+.neon-pink {
+  color: var(--neon-pink);
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px var(--neon-pink),
+    0 0 20px var(--neon-pink),
+    0 0 25px var(--neon-pink);
+}
+
+.neon-blue {
+  color: var(--neon-blue);
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px var(--neon-blue),
+    0 0 20px var(--neon-blue),
+    0 0 25px var(--neon-blue);
+}
+
+.neon-green {
+  color: var(--neon-green);
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px var(--neon-green),
+    0 0 20px var(--neon-green),
+    0 0 25px var(--neon-green);
+}
+
+/* 闪烁效果 */
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* 头部样式 */
+.arcade-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 4px solid var(--neon-blue);
+  position: relative;
+}
+
+.arcade-logo {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.arcade-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--arcade-dark);
+  color: white;
+  text-decoration: none;
+  border: 2px solid var(--arcade-light);
+  transition: all 0.3s;
+}
+
+.nav-btn:hover, .nav-btn.active {
+  background-color: var(--arcade-light);
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.coin-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.insert-coin-btn {
+  background-color: var(--arcade-dark);
+  color: var(--neon-yellow);
+  border: 2px solid var(--neon-yellow);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  box-shadow: 0 0 10px var(--neon-yellow);
+  transition: all 0.3s;
+}
+
+.insert-coin-btn:hover {
+  background-color: var(--neon-yellow);
+  color: var(--arcade-dark);
+}
+
+.coin-counter {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--neon-yellow);
+}
+
+/* 主体内容 */
+.arcade-hall {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 欢迎屏幕 */
+.welcome-screen {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border: 4px solid var(--arcade-light);
+}
+
+.welcome-message {
+  margin-top: 2rem;
+}
+
+.welcome-message h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-message p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* 区域标题 */
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+/* 游戏类别行 */
+.category-row {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border: 4px solid var(--arcade-light);
+}
+
+.category-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--neon-blue);
+}
+
+/* 街机柜容器 */
+.arcade-machines {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* 街机柜样式 */
+.arcade-cabinet {
+  background-color: var(--arcade-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid var(--arcade-light);
+}
+
+.arcade-cabinet:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--neon-blue);
+}
+
+.cabinet-screen {
+  flex: 1;
+  padding: 10px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.cabinet-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.arcade-cabinet:hover .cabinet-screen img {
+  transform: scale(1.1);
+}
+
+.cabinet-title {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: var(--arcade-light);
+  color: white;
+}
+
+.cabinet-controls {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: var(--arcade-dark);
+}
+
+.control-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  border: 2px solid black;
+}
+
+.control-btn.blue { background-color: blue; }
+.control-btn.green { background-color: green; }
+.control-btn.yellow { background-color: yellow; }
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--arcade-dark);
+  color: white;
+  border: 2px solid var(--neon-green);
+  padding: 0.5rem 1rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+.arcade-cabinet:hover .play-btn {
+  opacity: 1;
+}
+
+/* 查看更多按钮 */
+.see-more-btn {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--arcade-dark);
+  color: var(--neon-blue);
+  text-decoration: none;
+  border: 2px solid var(--neon-blue);
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.see-more-btn:hover {
+  background-color: var(--neon-blue);
+  color: var(--arcade-dark);
+}
+
+/* 关于区域 */
+.about-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border: 4px solid var(--arcade-light);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* 页脚 */
+.arcade-footer {
+  background-color: var(--arcade-dark);
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 4px solid var(--neon-pink);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #888;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--neon-blue);
+}
+
+/* 加载动画 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  grid-column: 1 / -1;
+}
+
+.loading-text {
+  font-size: 1.5rem;
+  color: var(--neon-green);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .arcade-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .arcade-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .arcade-machines {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .arcade-cabinet {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .arcade-machines {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .welcome-message h2 {
+    font-size: 1.5rem;
+  }
+}

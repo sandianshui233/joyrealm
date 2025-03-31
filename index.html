@@ -10,161 +10,286 @@
     <meta name="description" content="Dive into the extraordinary world of Joyrealm, where adventure and excitement await at every turn.">
     <!-- 删除重复的缓存控制标签 -->
     <link rel="canonical" href="https://joyrealm.org/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <!-- 添加结构化数据 -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "JoyRealm",
-        "url": "https://joyrealm.org/",
-        "description": "Dive into the extraordinary world of Joyrealm, where adventure and excitement await at every turn.",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://joyrealm.org/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
+    <!-- 在head部分添加像素字体 -->
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+        <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!-- 添加结构化数据 -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "JoyRealm",
+            "url": "https://joyrealm.org/",
+            "description": "Dive into the extraordinary world of Joyrealm, where adventure and excitement await at every turn.",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://joyrealm.org/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
         }
-    }
-    </script>
-    <!-- 添加社交媒体元标签 -->
-    <meta property="og:title" content="JoyRealm - Experience the Ultimate Gaming Adventure">
-    <meta property="og:description" content="Dive into the extraordinary world of Joyrealm, where adventure and excitement await at every turn.">
-    <meta property="og:image" content="https://joyrealm.org/assets/images/joyrealm-og.jpg">
-    <meta property="og:url" content="https://joyrealm.org/">
-    <meta name="twitter:card" content="summary_large_image">
+        </script>
+        <!-- 添加社交媒体元标签 -->
+        <meta property="og:title" content="JoyRealm - Experience the Ultimate Gaming Adventure">
+        <meta property="og:description" content="Dive into the extraordinary world of Joyrealm, where adventure and excitement await at every turn.">
+        <meta property="og:image" content="https://joyrealm.org/assets/images/joyrealm-og.jpg">
+        <meta property="og:url" content="https://joyrealm.org/">
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+    
+    <body class="relative min-h-screen crt-effect">
+        <div class="star-bg"></div>
+        
+        <header class="py-6 px-4 md:px-8 lg:px-16">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="text-3xl font-bold">
+                    <a href="/" class="hover:opacity-80 transition neon-text" style="color: var(--neon-yellow);">
+                        <span>Joy</span><span style="color: var(--neon-pink);">Realm</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-6 mr-6">
+                    <a href="/" class="text-white hover:text-yellow-400 transition">Home</a>
+                    <a href="/categories/action.html" class="text-white hover:text-yellow-400 transition">Action</a>
+                    <a href="/categories/puzzle.html" class="text-white hover:text-yellow-400 transition">Puzzle</a>
+                    <a href="/categories/music.html" class="text-white hover:text-yellow-400 transition">Music</a>
+                </nav>
+                <button class="pixel-btn">PLAY NOW</button>
+            </div>
+        </header>
+        
+        <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
+            <div class="insert-coin">INSERT COIN TO CONTINUE</div>
+            
+            <section class="text-center mb-16">
+                <h1 class="jojo-title text-4xl md:text-5xl lg:text-6xl mb-4 neon-text">WELCOME TO JOYREALM</h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Embark on an extraordinary journey where reality bends to your imagination!</p>
+            </section>
+            <section class="jojo-container p-8 rounded-lg mb-16">
+                <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6">ABOUT THE GAME</h2>
+                <p class="text-lg mb-6">
+                    Joyrealm is an immersive gaming experience that transports players to a vibrant universe filled with challenges, adventures, and endless possibilities. Designed with cutting-edge technology and inspired by classic gaming elements, Joyrealm offers a unique blend of nostalgia and innovation.
+                </p>
+                <p class="text-lg">
+                    Whether you're a casual gamer looking for a quick escape or a dedicated player seeking depth and complexity, Joyrealm delivers an experience tailored to your preferences. With intuitive controls, stunning visuals, and an engaging storyline, this game promises hours of entertainment for players of all ages and skill levels.
+                </p>
+            </section>
+            
+            <!-- 游戏iframe部分 -->
+            <!-- 替换游戏iframe部分为推荐游戏预览 -->
+            <section class="mb-16">
+                <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6 text-center neon-text" style="color: var(--neon-green);">FEATURED GAME</h2>
+                <div class="game-preview arcade-cabinet">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/images/games/sprunki.jpg" alt="Incredibox - Sprunki" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <a href="games/sprunki.html" class="pixel-btn">PLAY NOW</a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mt-4 neon-text">Incredibox - Sprunki</h3>
+                    <p class="text-center text-gray-300">Create your own music with a happy crew of beatboxers.</p>
+                </div>
+            </section>
+            
+            <!-- 游戏特性部分 -->
+            <section class="jojo-container p-8 rounded-lg mb-16">
+                <h2 class="jojo-subtitle text-2xl md:text-3xl mb-8">GAME FEATURES</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="feature-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-400 mb-3">Immersive Worlds</h3>
+                        <p class="text-gray-300">Explore a world that responds to your choices and actions, creating a truly personalized adventure.</p>
+                    </div>
+                    <div class="feature-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-green-400 mb-3">Stunning Visuals</h3>
+                        <p class="text-gray-300">Feast your eyes on breathtaking landscapes and meticulously designed characters that bring the world to life.</p>
+                    </div>
+                    <div class="feature-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-pink-400 mb-3">Epic Soundtrack</h3>
+                        <p class="text-gray-300">Immerse yourself in a dynamic audio experience that adapts to your gameplay and enhances every moment.</p>
+                    </div>
+                    <div class="feature-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-yellow-400 mb-3">Challenging Puzzles</h3>
+                        <p class="text-gray-300">Test your wit and problem-solving skills with a variety of puzzles that increase in difficulty as you progress.</p>
+                    </div>
+                    <div class="feature-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-purple-400 mb-3">Character Customization</h3>
+                        <p class="text-gray-300">Create and evolve your character with countless customization options and unique upgrades.</p>
+                    </div>
+                    <div class="feature-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-red-400 mb-3">Multiplayer Options</h3>
+                        <p class="text-gray-300">Connect with friends and compete or collaborate in exciting multiplayer modes for added enjoyment.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 热门游戏部分 - 移到正确位置 -->
+            <section class="py-16 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-purple-900/30 to-black/50 z-0"></div>
+                <div class="container mx-auto px-4 relative z-10">
+                    <h2 class="text-4xl font-bold text-center mb-12 neon-text" style="color: var(--neon-pink);">
+                        POPULAR GAMES
+                    </h2>
+                    
+                    <div id="featured-games" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <!-- 游戏卡片将通过JavaScript动态加载 -->
+                        <div class="col-span-full text-center py-8">
+                            <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
+                            <p class="mt-4 text-gray-400">Loading games...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="bg-black bg-opacity-50 py-8 px-4 md:px-8 lg:px-16">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <div class="text-2xl font-bold text-white mb-2">
+                            <span class="text-yellow-400">Joy</span><span class="text-purple-400">Realm</span>
+                        </div>
+                        <p class="text-gray-400">© 2023 Joyrealm. All rights reserved.</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="assets/js/homepage.js?v=1.0.1"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // 加载热门游戏
+                if (typeof loadFeaturedGames === 'function') {
+                    loadFeaturedGames();
+                }
+            });
+        </script>
+    </body>
+    </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 保留现有的head内容 -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/arcade.css?v=1.0.0">
 </head>
 
-<body class="relative min-h-screen crt-effect">
-    <div class="star-bg"></div>
+<body class="arcade-body">
+    <!-- CRT屏幕效果覆盖层 -->
+    <div class="crt-overlay"></div>
     
-    <header class="py-6 px-4 md:px-8 lg:px-16">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-3xl font-bold">
-                <a href="/" class="hover:opacity-80 transition neon-text" style="color: var(--neon-yellow);">
-                    <span>Joy</span><span style="color: var(--neon-pink);">Realm</span>
-                </a>
-            </div>
-            <nav class="hidden md:flex space-x-6 mr-6">
-                <a href="/" class="text-white hover:text-yellow-400 transition">Home</a>
-                <a href="/categories/action.html" class="text-white hover:text-yellow-400 transition">Action</a>
-                <a href="/categories/puzzle.html" class="text-white hover:text-yellow-400 transition">Puzzle</a>
-                <a href="/categories/music.html" class="text-white hover:text-yellow-400 transition">Music</a>
-            </nav>
-            <button class="pixel-btn">PLAY NOW</button>
+    <!-- 街机厅入口 -->
+    <header class="arcade-header">
+        <div class="logo-container">
+            <h1 class="arcade-logo">
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </h1>
+        </div>
+        <nav class="arcade-nav">
+            <a href="/" class="nav-btn active">Home</a>
+            <a href="/categories/action.html" class="nav-btn">Action</a>
+            <a href="/categories/puzzle.html" class="nav-btn">Puzzle</a>
+            <a href="/categories/music.html" class="nav-btn">Music</a>
+        </nav>
+        <div class="coin-slot">
+            <button class="insert-coin-btn">INSERT COIN</button>
+            <div class="coin-counter">CREDITS: 0</div>
         </div>
     </header>
     
-    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
-        <div class="insert-coin">INSERT COIN TO CONTINUE</div>
-        
-        <section class="text-center mb-16">
-            <h1 class="jojo-title text-4xl md:text-5xl lg:text-6xl mb-4 neon-text">WELCOME TO JOYREALM</h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Embark on an extraordinary journey where reality bends to your imagination!</p>
-        </section>
-        <section class="jojo-container p-8 rounded-lg mb-16">
-            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6">ABOUT THE GAME</h2>
-            <p class="text-lg mb-6">
-                Joyrealm is an immersive gaming experience that transports players to a vibrant universe filled with challenges, adventures, and endless possibilities. Designed with cutting-edge technology and inspired by classic gaming elements, Joyrealm offers a unique blend of nostalgia and innovation.
-            </p>
-            <p class="text-lg">
-                Whether you're a casual gamer looking for a quick escape or a dedicated player seeking depth and complexity, Joyrealm delivers an experience tailored to your preferences. With intuitive controls, stunning visuals, and an engaging storyline, this game promises hours of entertainment for players of all ages and skill levels.
-            </p>
-        </section>
-        
-        <!-- 游戏iframe部分 -->
-        <!-- 替换游戏iframe部分为推荐游戏预览 -->
-        <section class="mb-16">
-            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6 text-center" style="color: var(--neon-green);">FEATURED GAME</h2>
-            <div class="game-preview arcade-cabinet">
-                <div class="relative overflow-hidden rounded-lg">
-                    <img src="assets/images/games/sprunki.jpg" alt="Incredibox - Sprunki" class="w-full h-auto">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                        <a href="games/sprunki.html" class="pixel-btn">PLAY NOW</a>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold text-center mt-4 neon-text">Incredibox - Sprunki</h3>
-                <p class="text-center text-gray-300">Create your own music with a happy crew of beatboxers.</p>
+    <main class="arcade-hall">
+        <!-- 欢迎区域 -->
+        <section class="welcome-screen">
+            <h2 class="neon-text blink">INSERT COIN TO CONTINUE</h2>
+            <div class="welcome-message">
+                <h2 class="neon-blue">WELCOME TO JOYREALM</h2>
+                <p>Embark on an extraordinary journey where reality bends to your imagination!</p>
             </div>
         </section>
         
-        <!-- 游戏特性部分 -->
-        <section class="jojo-container p-8 rounded-lg mb-16">
-            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-8">GAME FEATURES</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-blue-400 mb-3">Immersive Worlds</h3>
-                    <p class="text-gray-300">Explore a world that responds to your choices and actions, creating a truly personalized adventure.</p>
+        <!-- 游戏类别区域 -->
+        <section class="game-categories">
+            <h2 class="section-title neon-green">SELECT YOUR GAME</h2>
+            
+            <!-- 动作游戏区域 -->
+            <div class="category-row">
+                <h3 class="category-title">ACTION GAMES</h3>
+                <div class="arcade-machines">
+                    <!-- 这里将通过JS动态加载该类别的游戏 -->
                 </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-green-400 mb-3">Stunning Visuals</h3>
-                    <p class="text-gray-300">Feast your eyes on breathtaking landscapes and meticulously designed characters that bring the world to life.</p>
+                <a href="/categories/action.html" class="see-more-btn">MORE ACTION GAMES</a>
+            </div>
+            
+            <!-- 益智游戏区域 -->
+            <div class="category-row">
+                <h3 class="category-title">PUZZLE GAMES</h3>
+                <div class="arcade-machines">
+                    <!-- 这里将通过JS动态加载该类别的游戏 -->
                 </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-pink-400 mb-3">Epic Soundtrack</h3>
-                    <p class="text-gray-300">Immerse yourself in a dynamic audio experience that adapts to your gameplay and enhances every moment.</p>
+                <a href="/categories/puzzle.html" class="see-more-btn">MORE PUZZLE GAMES</a>
+            </div>
+            
+            <!-- 音乐游戏区域 -->
+            <div class="category-row">
+                <h3 class="category-title">MUSIC GAMES</h3>
+                <div class="arcade-machines">
+                    <!-- 这里将通过JS动态加载该类别的游戏 -->
                 </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-yellow-400 mb-3">Challenging Puzzles</h3>
-                    <p class="text-gray-300">Test your wit and problem-solving skills with a variety of puzzles that increase in difficulty as you progress.</p>
-                </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-purple-400 mb-3">Character Customization</h3>
-                    <p class="text-gray-300">Create and evolve your character with countless customization options and unique upgrades.</p>
-                </div>
-                <div class="feature-card p-6 rounded-lg">
-                    <h3 class="text-xl font-bold text-red-400 mb-3">Multiplayer Options</h3>
-                    <p class="text-gray-300">Connect with friends and compete or collaborate in exciting multiplayer modes for added enjoyment.</p>
+                <a href="/categories/music.html" class="see-more-btn">MORE MUSIC GAMES</a>
+            </div>
+        </section>
+        
+        <!-- 热门游戏区域 -->
+        <section class="popular-games">
+            <h2 class="section-title neon-pink">POPULAR GAMES</h2>
+            <div id="featured-games" class="arcade-machines featured">
+                <!-- 游戏卡片将通过JavaScript动态加载 -->
+                <div class="loading-container">
+                    <div class="loading-text blink">LOADING...</div>
                 </div>
             </div>
         </section>
         
-        <!-- 热门游戏部分 - 移到正确位置 -->
-        <section class="py-16 relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-purple-900/30 to-black/50 z-0"></div>
-            <div class="container mx-auto px-4 relative z-10">
-                <h2 class="text-4xl font-bold text-center mb-12 neon-text" style="color: var(--neon-pink);">
-                    POPULAR GAMES
-                </h2>
-                
-                <div id="featured-games" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- 游戏卡片将通过JavaScript动态加载 -->
-                    <div class="col-span-full text-center py-8">
-                        <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
-                        <p class="mt-4 text-gray-400">Loading games...</p>
-                    </div>
-                </div>
+        <!-- 关于区域 -->
+        <section class="about-section arcade-screen">
+            <h2 class="section-title neon-yellow">ABOUT THE ARCADE</h2>
+            <div class="about-content">
+                <p>
+                    Joyrealm is an immersive gaming experience that transports players to a vibrant universe filled with challenges, adventures, and endless possibilities. Designed with cutting-edge technology and inspired by classic gaming elements, Joyrealm offers a unique blend of nostalgia and innovation.
+                </p>
+                <p>
+                    Whether you're a casual gamer looking for a quick escape or a dedicated player seeking depth and complexity, Joyrealm delivers an experience tailored to your preferences. With intuitive controls, stunning visuals, and an engaging storyline, this game promises hours of entertainment for players of all ages and skill levels.
+                </p>
             </div>
         </section>
     </main>
     
-    <footer class="bg-black bg-opacity-50 py-8 px-4 md:px-8 lg:px-16">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="text-2xl font-bold text-white mb-2">
-                        <span class="text-yellow-400">Joy</span><span class="text-purple-400">Realm</span>
-                    </div>
-                    <p class="text-gray-400">© 2023 Joyrealm. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Terms of Service</a>
-                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
-                </div>
+    <footer class="arcade-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </div>
+            <p class="copyright">© 2023 Joyrealm. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
             </div>
         </div>
     </footer>
-    <script src="assets/js/homepage.js?v=1.0.1"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 加载热门游戏
-            if (typeof loadFeaturedGames === 'function') {
-                loadFeaturedGames();
-            }
-        });
-    </script>
+    
+    <!-- 音效资源 -->
+    <audio id="coin-sound" src="assets/sounds/coin.mp3" preload="auto"></audio>
+    <audio id="button-sound" src="assets/sounds/button.mp3" preload="auto"></audio>
+    
+    <!-- 脚本 -->
+    <script src="assets/js/arcade-effects.js"></script>
+    <script src="assets/js/homepage.js"></script>
 </body>
 </html>
 

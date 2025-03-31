@@ -1,5 +1,7 @@
 // 复古街机效果
 
+// 街机特效脚本
+
 // CRT屏幕开关效果
 function crtToggleEffect() {
     const body = document.body;
@@ -8,6 +10,90 @@ function crtToggleEffect() {
         body.classList.remove('crt-off');
     }, 100);
 }
+
+// 霓虹灯闪烁效果
+function setupNeonFlicker() {
+    const neonElements = document.querySelectorAll('.neon-text, .neon-yellow, .neon-pink, .neon-blue, .neon-green');
+    
+    neonElements.forEach(el => {
+        // 随机闪烁
+        if (Math.random() > 0.9) {
+            el.classList.add('flicker');
+            setTimeout(() => {
+                el.classList.remove('flicker');
+            }, 200 + Math.random() * 500);
+        }
+    });
+    
+    // 定期调用
+    setTimeout(setupNeonFlicker, 2000);
+}
+
+// 添加CSS类
+function addArcadeStyles() {
+    const styleEl = document.createElement('style');
+    styleEl.textContent = `
+        .crt-off {
+            opacity: 0.8;
+            filter: brightness(0.8) contrast(1.2);
+            transition: all 0.1s;
+        }
+        
+        .flicker {
+            opacity: 0.7;
+            transition: opacity 0.1s;
+        }
+        
+        @keyframes scanline {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+        
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 999;
+            animation: scanline 8s linear infinite;
+            pointer-events: none;
+        }
+    `;
+    document.head.appendChild(styleEl);
+    
+    // 添加扫描线
+    const scanline = document.createElement('div');
+    scanline.className = 'scanline';
+    document.body.appendChild(scanline);
+}
+
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', function() {
+    // 添加样式
+    addArcadeStyles();
+    
+    // CRT开机效果
+    crtToggleEffect();
+    
+    // 启动霓虹灯闪烁
+    setupNeonFlicker();
+    
+    // 为所有按钮添加音效
+    document.addEventListener('click', function(e) {
+        if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
+            const buttonSound = document.getElementById('button-sound');
+            if (buttonSound && typeof playButtonSound === 'function') {
+                playButtonSound();
+            }
+        }
+    });
+});
 
 // 投币音效
 function playCoinSound() {

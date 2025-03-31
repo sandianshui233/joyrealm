@@ -10,7 +10,7 @@ function setupGameLazyLoading() {
   placeholder.innerHTML = `
     <div class="flex flex-col items-center justify-center h-full">
       <div class="insert-coin mb-4">INSERT COIN TO PLAY</div>
-      <button class="pixel-btn load-game-btn">START GAME</button>
+      <button class="load-game-btn">START GAME</button>
     </div>
   `;
   
@@ -30,6 +30,12 @@ function setupGameLazyLoading() {
     // 播放投币音效
     if (typeof playCoinSound === 'function') {
       playCoinSound();
+    } else {
+      const coinSound = document.getElementById('coin-sound');
+      if (coinSound) {
+        coinSound.currentTime = 0;
+        coinSound.play();
+      }
     }
     
     // 显示加载动画

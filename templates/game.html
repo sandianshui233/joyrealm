@@ -3,91 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play {{GAME_TITLE}} on JoyRealm - Free Online Games</title>
-    <meta name="description" content="Play {{GAME_TITLE}} online for free on JoyRealm. {{GAME_DESCRIPTION}}">
-    <link rel="canonical" href="https://joyrealm.org/games/{{GAME_SLUG}}">
+    <title>{{GAME_TITLE}} - JoyRealm</title>
+    <meta name="description" content="Play {{GAME_TITLE}} on JoyRealm - {{GAME_DESCRIPTION}}">
+    <link rel="canonical" href="https://joyrealm.org/games/{{GAME_SLUG}}.html">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://joyrealm.org/games/{{GAME_SLUG}}">
-    <meta property="og:title" content="Play {{GAME_TITLE}} on JoyRealm">
-    <meta property="og:description" content="{{GAME_DESCRIPTION}}">
-    <meta property="og:image" content="https://joyrealm.org/assets/images/games/{{GAME_SLUG}}.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://joyrealm.org/games/{{GAME_SLUG}}">
-    <meta property="twitter:title" content="Play {{GAME_TITLE}} on JoyRealm">
-    <meta property="twitter:description" content="{{GAME_DESCRIPTION}}">
-    <meta property="twitter:image" content="https://joyrealm.org/assets/images/games/{{GAME_SLUG}}.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/arcade.css?v=1.0.0">
+    <link rel="stylesheet" href="../assets/css/game-detail.css?v=1.0.0">
 </head>
-<body class="relative min-h-screen">
-    <div class="star-bg"></div>
+
+<body class="arcade-body">
+    <!-- CRT屏幕效果覆盖层 -->
+    <div class="crt-overlay"></div>
     
-    <header class="py-6 px-4 md:px-8 lg:px-16" id="header-container">
-        <!-- 页头将通过JavaScript动态加载 -->
+    <!-- 头部 -->
+    <header class="arcade-header">
+        <div class="logo-container">
+            <a href="/" class="arcade-logo">
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </a>
+        </div>
+        <nav class="arcade-nav">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/categories/action.html" class="nav-btn">Action</a>
+            <a href="/categories/puzzle.html" class="nav-btn">Puzzle</a>
+            <a href="/categories/music.html" class="nav-btn">Music</a>
+        </nav>
+        <div class="coin-slot">
+            <button class="insert-coin-btn">INSERT COIN</button>
+            <div class="coin-counter">CREDITS: 0</div>
+        </div>
     </header>
     
-    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
+    <main class="game-detail">
         <!-- 游戏标题 -->
-        <section class="text-center mb-8">
-            <h1 class="jojo-title text-3xl md:text-4xl lg:text-5xl mb-4">{{GAME_TITLE}}</h1>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">{{GAME_DESCRIPTION}}</p>
-        </section>
+        <h1 class="game-title neon-blue">{{GAME_TITLE}}</h1>
         
-        <!-- 广告位：游戏上方 -->
-        <div class="ad-container ad-above-game w-full h-24 bg-gray-800 bg-opacity-50 flex items-center justify-center mb-8 border border-dashed border-gray-600">
-            <p class="text-gray-400">广告位：游戏上方</p>
-        </div>
-        
-        <!-- 游戏框架 -->
-        <section class="mb-8">
-            <div class="game-frame">
-                {{GAME_EMBED_CODE}}
-            </div>
-        </section>
-        
-        <!-- 广告位：游戏下方 -->
-        <div class="ad-container ad-below-game w-full h-24 bg-gray-800 bg-opacity-50 flex items-center justify-center mb-8 border border-dashed border-gray-600">
-            <p class="text-gray-400">广告位：游戏下方</p>
-        </div>
-        
-        <!-- 游戏信息 -->
-        <section class="jojo-container p-8 rounded-lg mb-16">
-            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-6">ABOUT THIS GAME</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="md:col-span-2">
-                    <p class="text-lg mb-6">{{GAME_FULL_DESCRIPTION}}</p>
-                    
-                    <h3 class="text-xl font-bold mb-3 text-yellow-400">How to Play</h3>
-                    <p class="mb-6">{{GAME_INSTRUCTIONS}}</p>
-                </div>
-                <div>
-                    <div class="bg-black bg-opacity-50 p-4 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-yellow-400">Game Details</h3>
-                        <ul class="space-y-2">
-                            <li><span class="text-gray-400">Category:</span> {{GAME_CATEGORY}}</li>
-                            <li><span class="text-gray-400">Tags:</span> {{GAME_TAGS}}</li>
-                            <li><span class="text-gray-400">Added:</span> {{GAME_DATE_ADDED}}</li>
-                            <li><span class="text-gray-400">Plays:</span> {{GAME_PLAY_COUNT}}</li>
-                        </ul>
-                    </div>
+        <!-- 街机柜 -->
+        <div class="game-cabinet">
+            <!-- 街机柜顶部 -->
+            <div class="cabinet-top">
+                <div class="cabinet-marquee">
+                    <div class="marquee-text">{{GAME_TITLE}}</div>
                 </div>
             </div>
-        </section>
-        
-        <!-- 相关游戏 -->
-        <!-- 游戏iframe部分 -->
-        <section class="mb-16">
-            <div class="arcade-cabinet p-4">
-                <div class="arcade-screen relative">
-                    <!-- 街机屏幕装饰 -->
-                    <div class="arcade-screen-bezel"></div>
-                    
-                    <!-- 游戏iframe -->
-                    <div class="game-frame crt-effect">
+            
+            <!-- 街机柜屏幕 -->
+            <div class="cabinet-body">
+                <div class="screen-bezel">
+                    <div class="game-frame">
                         <iframe 
                             frameborder="0" 
                             src="{{GAME_EMBED_SRC}}" 
@@ -97,47 +61,77 @@
                             <a href="{{GAME_ORIGINAL_URL}}">Play {{GAME_TITLE}} on original site</a>
                         </iframe>
                     </div>
-                    
-                    <!-- 街机控制装饰 -->
-                    <div class="arcade-controls">
-                        <div class="joystick"></div>
-                        <div class="buttons">
-                            <div class="button red"></div>
-                            <div class="button blue"></div>
-                            <div class="button green"></div>
-                            <div class="button yellow"></div>
+                </div>
+            </div>
+            
+            <!-- 街机柜控制面板 -->
+            <div class="cabinet-controls">
+                <div class="joystick">
+                    <div class="joystick-base"></div>
+                    <div class="joystick-stick"></div>
+                </div>
+                <div class="control-buttons">
+                    <div class="control-btn red"></div>
+                    <div class="control-btn blue"></div>
+                    <div class="control-btn green"></div>
+                    <div class="control-btn yellow"></div>
+                </div>
+                <div class="coin-button">
+                    <button id="insert-coin-game" class="insert-coin-btn">INSERT COIN</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 游戏信息 -->
+        <div class="game-info">
+            <div class="info-card">
+                <h2 class="info-title neon-green">GAME INFO</h2>
+                <div class="info-content">
+                    <p class="game-description">{{GAME_DESCRIPTION}}</p>
+                    <div class="game-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Category:</span>
+                            <span class="meta-value">{{GAME_CATEGORY}}</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Controls:</span>
+                            <span class="meta-value">{{GAME_CONTROLS}}</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            
+            <!-- 相关游戏 -->
+            <div class="related-games">
+                <h2 class="info-title neon-pink">RELATED GAMES</h2>
+                <div class="related-games-grid">
+                    <!-- 相关游戏将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </div>
     </main>
     
-    <footer class="bg-black bg-opacity-50 py-8 px-4 md:px-8 lg:px-16" id="footer-container">
-        <!-- 页脚将通过JavaScript动态加载 -->
+    <footer class="arcade-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </div>
+            <p class="copyright">© 2023 Joyrealm. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
     </footer>
     
-    <!-- 广告位：底部粘性 -->
-    <div class="ad-container ad-sticky-bottom fixed bottom-0 left-0 w-full h-16 bg-gray-900 bg-opacity-90 flex items-center justify-center border-t border-gray-800">
-        <p class="text-gray-400">广告位：底部粘性</p>
-    </div>
+    <!-- 音效资源 -->
+    <audio id="coin-sound" src="../assets/sounds/coin.mp3" preload="auto"></audio>
+    <audio id="button-sound" src="../assets/sounds/button.mp3" preload="auto"></audio>
     
-    <script src="/assets/js/components.js"></script>
-    <script src="/assets/js/games.js"></script>
-    <script>
-        // 加载相关游戏
-        document.addEventListener('DOMContentLoaded', function() {
-            loadRelatedGames('{{GAME_SLUG}}', '{{GAME_CATEGORY}}');
-            
-            // 记录游戏到"最近玩过"
-            addToRecentlyPlayed({
-                id: '{{GAME_ID}}',
-                title: '{{GAME_TITLE}}',
-                slug: '{{GAME_SLUG}}',
-                thumbnail: '/assets/images/games/{{GAME_SLUG}}.jpg',
-                category: '{{GAME_CATEGORY}}'
-            });
-        });
-    </script>
+    <!-- 脚本 -->
+    <script src="../assets/js/arcade-effects.js"></script>
+    <script src="../assets/js/game-loader.js"></script>
+    <script src="../assets/js/game-detail.js"></script>
 </body>
 </html>
