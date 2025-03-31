@@ -79,10 +79,36 @@
         </section>
         
         <!-- 相关游戏 -->
+        <!-- 游戏iframe部分 -->
         <section class="mb-16">
-            <h2 class="jojo-subtitle text-2xl md:text-3xl mb-8">SIMILAR GAMES</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="related-games-container">
-                <!-- 相关游戏将通过JavaScript动态加载 -->
+            <div class="arcade-cabinet p-4">
+                <div class="arcade-screen relative">
+                    <!-- 街机屏幕装饰 -->
+                    <div class="arcade-screen-bezel"></div>
+                    
+                    <!-- 游戏iframe -->
+                    <div class="game-frame crt-effect">
+                        <iframe 
+                            frameborder="0" 
+                            src="{{GAME_EMBED_SRC}}" 
+                            allowfullscreen="" 
+                            width="100%" 
+                            height="100%">
+                            <a href="{{GAME_ORIGINAL_URL}}">Play {{GAME_TITLE}} on original site</a>
+                        </iframe>
+                    </div>
+                    
+                    <!-- 街机控制装饰 -->
+                    <div class="arcade-controls">
+                        <div class="joystick"></div>
+                        <div class="buttons">
+                            <div class="button red"></div>
+                            <div class="button blue"></div>
+                            <div class="button green"></div>
+                            <div class="button yellow"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

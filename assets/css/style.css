@@ -40,21 +40,76 @@ body {
     padding-bottom: 5px;
 }
 
+/* 游戏iframe容器 */
 .game-frame {
-    border: 5px solid var(--jojo-gold);
-    box-shadow: 0 0 30px var(--jojo-purple);
-    border-radius: 8px;
-    overflow: hidden;
-    width: 100%;
-    aspect-ratio: 16/9;
-    max-width: 1000px;
-    margin: 0 auto;
-    height: 600px; /* 添加固定高度 */
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 宽高比 */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 4px solid #333;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
 }
 
 .game-frame iframe {
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+/* 确保CRT效果不影响游戏操作 */
+.game-frame.crt-effect::before {
+  pointer-events: none;
+  opacity: 0.3; /* 降低扫描线效果强度 */
+}
+
+/* 街机柜样式调整，确保不影响游戏内容 */
+.arcade-cabinet {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 
+    0 0 0 4px #333,
+    0 0 0 8px #111,
+    0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* 街机屏幕边框 */
+.arcade-screen {
+  position: relative;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* 街机控制装饰，确保不遮挡游戏内容 */
+.arcade-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .arcade-controls {
+    display: none; /* 在移动设备上隐藏装饰元素 */
+  }
+  
+  .arcade-cabinet {
+    padding: 10px;
+  }
+  
+  .arcade-screen {
+    padding: 10px;
+  }
 }
 
 .feature-card {
@@ -87,24 +142,126 @@ body {
     box-shadow: 0 7px 20px rgba(155, 89, 182, 0.7);
 }
 
-.star-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.3;
-    background-image: 
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
-    background-size: 550px 550px, 350px 350px, 250px 250px;
-    background-position: 0 0, 40px 60px, 130px 270px;
+/* 复古街机风格 */
+:root {
+  --neon-pink: #ff00ff;
+  --neon-blue: #00ffff;
+  --neon-yellow: #ffff00;
+  --neon-green: #00ff00;
+  --dark-bg: #0a0a0a;
 }
 
-@media (max-width: 768px) {
-    .game-frame {
-        aspect-ratio: 4/3;
-    }
+body {
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  background-color: var(--dark-bg);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 霓虹文字效果 */
+.neon-text {
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px var(--neon-blue),
+    0 0 20px var(--neon-blue),
+    0 0 25px var(--neon-blue);
+  animation: neon-flicker 1.5s infinite alternate;
+}
+
+/* 霓虹灯闪烁动画 */
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px var(--neon-blue),
+      0 0 20px var(--neon-blue),
+      0 0 25px var(--neon-blue);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* CRT屏幕效果 */
+.crt-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* 街机柜风格卡片 */
+.arcade-cabinet {
+  border: 4px solid white;
+  border-image: linear-gradient(45deg, var(--neon-pink), var(--neon-blue), var(--neon-yellow)) 1;
+  box-shadow: 
+    0 0 10px var(--neon-pink),
+    0 0 20px var(--neon-blue);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+/* 像素化按钮 */
+.pixel-btn {
+  font-family: 'Press Start 2P', cursive;
+  padding: 10px 20px;
+  background-color: var(--dark-bg);
+  color: white;
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue);
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.pixel-btn:hover {
+  background-color: var(--neon-blue);
+  color: var(--dark-bg);
+  transform: translateY(-2px);
+}
+
+.pixel-btn:active {
+  transform: translateY(1px);
+}
+
+/* INSERT COIN 闪烁文本 */
+.insert-coin {
+  font-size: 1.5rem;
+  color: var(--neon-yellow);
+  animation: blink 1s infinite;
+  text-align: center;
+  margin: 20px 0;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* 星空背景增强 */
+.star-bg {
+  background-color: var(--dark-bg);
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 2px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px;
+  background-position: 0 0, 25px 25px;
 }
