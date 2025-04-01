@@ -147,3 +147,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // 监听游戏卡片加载完成
     document.addEventListener('gamesLoaded', updateGameCards);
 });
+
+
+// 添加更多音效函数
+function playGameStartSound() {
+    const gameStartSound = document.getElementById('game-start-sound');
+    if (gameStartSound) {
+        gameStartSound.currentTime = 0;
+        gameStartSound.play();
+    }
+}
+
+function playGameOverSound() {
+    const gameOverSound = document.getElementById('game-over-sound');
+    if (gameOverSound) {
+        gameOverSound.currentTime = 0;
+        gameOverSound.play();
+    }
+}
