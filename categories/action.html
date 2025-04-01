@@ -3,50 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JoyRealm - Action Games</title>
-    <meta name="description" content="Explore the best Action games on JoyRealm. Play free online games without downloads.">
-    <link rel="canonical" href="https://joyrealm.org/categories/action">
+    <title>Action Games - JoyRealm</title>
+    <meta name="description" content="Explore exciting action games on JoyRealm - Experience the thrill of fast-paced gameplay and adventure.">
+    <link rel="canonical" href="https://joyrealm.org/categories/action.html">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/arcade.css?v=1.0.0">
 </head>
-<body class="relative min-h-screen">
-    <div class="star-bg"></div>
+
+<body class="arcade-body">
+    <!-- CRT屏幕效果覆盖层 -->
+    <div class="crt-overlay"></div>
     
-    <header class="py-6 px-4 md:px-8 lg:px-16" id="header-container">
-        <!-- 页头将通过JavaScript动态加载 -->
+    <!-- 头部 -->
+    <header class="arcade-header">
+        <div class="logo-container">
+            <a href="/" class="arcade-logo">
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </a>
+        </div>
+        <nav class="arcade-nav">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/categories/action.html" class="nav-btn active">Action</a>
+            <a href="/categories/puzzle.html" class="nav-btn">Puzzle</a>
+            <a href="/categories/music.html" class="nav-btn">Music</a>
+        </nav>
+        <div class="coin-slot">
+            <button class="insert-coin-btn">INSERT COIN</button>
+            <div class="coin-counter">CREDITS: 0</div>
+        </div>
     </header>
     
-    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
-        <!-- 分类标题 -->
-        <section class="text-center mb-16">
-            <h1 class="jojo-title text-4xl md:text-5xl lg:text-6xl mb-4">ACTION GAMES</h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Discover the best Action games on JoyRealm!</p>
+    <main class="arcade-hall">
+        <!-- 类别标题 -->
+        <section class="category-header">
+            <h1 class="category-title neon-green">ACTION GAMES</h1>
+            <p class="category-description">
+                Experience the thrill of fast-paced gameplay with our collection of action games. 
+                Test your reflexes and skills in these exciting adventures.
+            </p>
         </section>
         
-        <!-- 广告位：顶部横幅 -->
-        <div class="ad-container ad-banner-top w-full h-24 bg-gray-800 bg-opacity-50 flex items-center justify-center mb-8 border border-dashed border-gray-600">
-            <p class="text-gray-400">广告位：顶部横幅</p>
-        </div>
-        
         <!-- 游戏列表 -->
-        <section class="mb-16">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="games-container">
-                <!-- 这里将通过JavaScript动态加载游戏卡片 -->
+        <section class="games-grid">
+            <div id="category-games" class="arcade-machines category-games">
+                <!-- 游戏卡片将通过JavaScript动态加载 -->
+                <div class="loading-container">
+                    <div class="loading-text blink">LOADING...</div>
+                </div>
             </div>
         </section>
     </main>
     
-    <footer class="bg-black bg-opacity-50 py-8 px-4 md:px-8 lg:px-16" id="footer-container">
-        <!-- 页脚将通过JavaScript动态加载 -->
+    <footer class="arcade-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </div>
+            <p class="copyright">© 2023 Joyrealm. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
     </footer>
     
-    <script src="../assets/js/components.js"></script>
-    <script src="../assets/js/games.js"></script>
-    <script>
-        // 加载特定分类的游戏
-        document.addEventListener('DOMContentLoaded', function() {
-            loadCategoryGames('action');
-        });
-    </script>
+    <!-- 音效资源 -->
+    <audio id="coin-sound" src="../assets/sounds/coin.mp3" preload="auto"></audio>
+    <audio id="button-sound" src="../assets/sounds/button-press.mp3" preload="auto"></audio>
+    
+    <!-- 脚本 -->
+    <script src="../assets/js/arcade-effects.js"></script>
+    <script src="../assets/js/category.js"></script>
 </body>
 </html>

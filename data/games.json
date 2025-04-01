@@ -1,11 +1,68 @@
 [
   {
-    "id": "sprunki",
-    "title": "Incredibox - Sprunki",
-    "slug": "sprunki",
-    "description": "创建你自己的音乐，与一群快乐的beatboxers一起。",
-    "category": "Music",
-    "thumbnail": "https://img.itch.zone/aW1nLzE3Njg0NDI5LmpwZWc=/315x250%23c/DFtblS.jpeg",
-    "embedSrc": "https://itch.io/embed/1893277?border_width=0&bg_color=333333&fg_color=ffffff&link_color=fa5c5c&border_color=333333"
+    "id": 1,
+    "title": "Space Shooter",
+    "slug": "space-shooter",
+    "category": "action",
+    "description": "经典太空射击游戏，消灭外星入侵者保卫地球",
+    "thumbnail": "assets/images/games/space-shooter.jpg",
+    "embedSrc": "https://example.com/games/space-shooter",
+    "controls": "方向键移动，空格键射击",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Puzzle Master",
+    "slug": "puzzle-master",
+    "category": "puzzle",
+    "description": "挑战你的智力，解开各种复杂谜题",
+    "thumbnail": "assets/images/games/puzzle-master.jpg",
+    "embedSrc": "https://example.com/games/puzzle-master",
+    "controls": "鼠标点击拖动",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Beat Hero",
+    "slug": "beat-hero",
+    "category": "music",
+    "description": "跟随节奏点击，成为音乐英雄",
+    "thumbnail": "assets/images/games/beat-hero.jpg",
+    "embedSrc": "https://example.com/games/beat-hero",
+    "controls": "A、S、D、F键对应节奏点",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Ninja Run",
+    "slug": "ninja-run",
+    "category": "action",
+    "description": "控制忍者角色，躲避障碍物并收集金币",
+    "thumbnail": "assets/images/games/ninja-run.jpg",
+    "embedSrc": "https://example.com/games/ninja-run",
+    "controls": "点击或空格键跳跃",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Color Match",
+    "slug": "color-match",
+    "category": "puzzle",
+    "description": "匹配相同颜色的方块，消除它们并获得高分",
+    "thumbnail": "assets/images/games/color-match.jpg",
+    "embedSrc": "https://example.com/games/color-match",
+    "controls": "鼠标点击或触摸",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Piano Tiles",
+    "slug": "piano-tiles",
+    "category": "music",
+    "description": "点击黑色琴键，演奏美妙的音乐",
+    "thumbnail": "assets/images/games/piano-tiles.jpg",
+    "embedSrc": "https://example.com/games/piano-tiles",
+    "controls": "鼠标点击或触摸",
+    "featured": false
   }
 ]

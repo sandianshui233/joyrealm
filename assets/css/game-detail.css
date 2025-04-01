@@ -129,38 +129,6 @@
   color: var(--arcade-dark);
 }
 
-.loading-text {
-  font-size: 1.5rem;
-  color: var(--neon-blue);
-  animation: blink 1s infinite;
-}
-
-.loading-bar {
-  width: 200px;
-  height: 20px;
-  background-color: #333;
-  margin-top: 1rem;
-  border: 2px solid #555;
-  position: relative;
-  overflow: hidden;
-}
-
-.loading-bar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background-color: var(--neon-blue);
-  animation: loading 1.5s ease-in-out infinite;
-}
-
-@keyframes loading {
-  0% { width: 0; }
-  100% { width: 100%; }
-}
-
 /* 街机柜控制面板 */
 .cabinet-controls {
   background: linear-gradient(to bottom, #333, #222);
@@ -281,6 +249,52 @@
   gap: 1rem;
 }
 
+.related-game-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.related-game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.related-game-link {
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+.related-game-img {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.related-game-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-game-info {
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.related-game-title {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: var(--neon-blue);
+}
+
+.related-game-category {
+  font-size: 0.7rem;
+  color: #888;
+}
+
 /* 响应式设计 */
 @media (max-width: 992px) {
   .game-info {
@@ -302,13 +316,5 @@
 @media (max-width: 480px) {
   .game-title {
     font-size: 1.8rem;
-  }
-  
-  .cabinet-top {
-    padding: 0.5rem;
-  }
-  
-  .marquee-text {
-    font-size: 1rem;
   }
 }
