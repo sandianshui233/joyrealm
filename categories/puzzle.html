@@ -47,9 +47,23 @@
         <!-- 游戏列表 -->
         <section class="games-grid">
             <div id="category-games" class="arcade-machines category-games">
-                <!-- 游戏卡片将通过JavaScript动态加载 -->
-                <div class="loading-container">
-                    <div class="loading-text blink">LOADING...</div>
+                <!-- Power Light 游戏卡片 -->
+                <div class="arcade-cabinet" data-game-id="5">
+                    <div class="cabinet-screen">
+                        <img 
+                            src="../assets/images/games/pl.jpg" 
+                            alt="Power Light"
+                            loading="lazy"
+                        >
+                        <button class="play-btn" data-game-slug="power-light">PLAY NOW</button>
+                    </div>
+                    <div class="cabinet-title neon-text">Power Light</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
                 </div>
             </div>
         </section>

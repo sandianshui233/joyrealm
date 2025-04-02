@@ -30,7 +30,7 @@
         </nav>
         <div class="coin-slot">
             <button class="insert-coin-btn">INSERT COIN</button>
-            <div class="coin-counter">CREDITS: 0</div>
+            <div class="coin-counter">CREDITS: a 0</div>
         </div>
     </header>
     
@@ -47,9 +47,42 @@
         <!-- 游戏列表 -->
         <section class="games-grid">
             <div id="category-games" class="arcade-machines category-games">
-                <!-- 游戏卡片将通过JavaScript动态加载 -->
-                <div class="loading-container">
-                    <div class="loading-text blink">LOADING...</div>
+                <!-- Noob in Geometry Dash 游戏卡片 -->
+                <div class="arcade-cabinet" data-game-id="3">
+                    <div class="cabinet-screen">
+                        <img 
+                            src="../assets/images/games/nigd.jpg" 
+                            alt="Noob in Geometry Dash"
+                            loading="lazy"
+                        >
+                        <button class="play-btn" data-game-slug="noob-in-geometry-dash">PLAY NOW</button>
+                    </div>
+                    <div class="cabinet-title neon-text">Noob in Geometry Dash</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
+                </div>
+                
+                <!-- Sprunki Beats 游戏卡片 -->
+                <div class="arcade-cabinet" data-game-id="6">
+                    <div class="cabinet-screen">
+                        <img 
+                            src="../assets/images/games/sp.jpg" 
+                            alt="Sprunki Beats"
+                            loading="lazy"
+                        >
+                        <button class="play-btn" data-game-slug="sprunki-beats">PLAY NOW</button>
+                    </div>
+                    <div class="cabinet-title neon-text">Sprunki Beats</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
                 </div>
             </div>
         </section>
