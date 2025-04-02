@@ -1,0 +1,11 @@
+﻿{
+    "id":  5,
+    "title":  "Power Light",
+    "slug":  "power-light",
+    "category":  "puzzle",
+    "description":  "Move the tiles around until the power can flow freely to the light bulb. Power up the light bulb to complete each level in this fun online puzzle game",
+    "thumbnail":  "assets/images/games/pl.jpg",
+    "embedSrc":  "https://html5.gamedistribution.com/c95ab28500734643b709f0a53a9fcecf/?gd_sdk_referrer_url=https://gamedistribution.com/games/power-light-1/",
+    "controls":  "Click or tap to rotate the tiles",
+    "featured":  true
+}
