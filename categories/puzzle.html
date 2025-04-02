@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Games - JoyRealm</title>
+    <meta name="description" content="Explore exciting puzzle games on JoyRealm - Challenge your mind with brain teasers, logic puzzles and strategic thinking.">
+    <link rel="canonical" href="https://joyrealm.org/categories/puzzle.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/arcade.css?v=1.0.0">
+</head>
+
+<body class="arcade-body">
+    <!-- CRT屏幕效果覆盖层 -->
+    <div class="crt-overlay"></div>
+    
+    <!-- 头部 -->
+    <header class="arcade-header">
+        <div class="logo-container">
+            <a href="/" class="arcade-logo">
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </a>
+        </div>
+        <nav class="arcade-nav">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/categories/action.html" class="nav-btn">Action</a>
+            <a href="/categories/puzzle.html" class="nav-btn active">Puzzle</a>
+            <a href="/categories/music.html" class="nav-btn">Music</a>
+        </nav>
+        <div class="coin-slot">
+            <button class="insert-coin-btn">INSERT COIN</button>
+            <div class="coin-counter">CREDITS: 0</div>
+        </div>
+    </header>
+    
+    <main class="arcade-hall">
+        <!-- 类别标题 -->
+        <section class="category-header">
+            <h1 class="category-title neon-green">PUZZLE GAMES</h1>
+            <p class="category-description">
+                Challenge your mind with our collection of puzzle games. 
+                Solve complex problems, test your logic and enjoy strategic thinking in these brain-teasing adventures.
+            </p>
+        </section>
+        
+        <!-- 游戏列表 -->
+        <section class="games-grid">
+            <div id="category-games" class="arcade-machines category-games">
+                <!-- 游戏卡片将通过JavaScript动态加载 -->
+                <div class="loading-container">
+                    <div class="loading-text blink">LOADING...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="arcade-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </div>
+            <p class="copyright">© 2023 Joyrealm. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 音效资源 -->
+    <audio id="coin-sound" src="../assets/sounds/coin.mp3" preload="auto"></audio>
+    <audio id="button-sound" src="../assets/sounds/button-press.mp3" preload="auto"></audio>
+    
+    <!-- 脚本 -->
+    <script src="../assets/js/arcade-effects.js"></script>
+    <script src="../assets/js/category.js"></script>
+</body>
+</html>
