@@ -1,13 +1,21 @@
 // 分类页面脚本
 
+// 全局变量，用于跟踪是否已加载游戏
+let gamesLoaded = false;
+
 // 加载分类游戏
 async function loadCategoryGames() {
+    // 如果已经加载过游戏，则不再重复加载
+    if (gamesLoaded) {
+        return;
+    }
+    
     try {
         // 获取当前分类
         const currentPath = window.location.pathname;
         const categorySlug = currentPath.split('/').pop().replace('.html', '');
         
-        // 加载所有游戏
+        // 加载分类特定的游戏
         const response = await fetch('../data/categories/' + categorySlug + '.json');
         if (!response.ok) {
             // 如果特定分类的JSON不存在，尝试加载所有游戏
@@ -25,6 +33,9 @@ async function loadCategoryGames() {
             const categoryGames = await response.json();
             displayGames(categoryGames);
         }
+        
+        // 标记游戏已加载
+        gamesLoaded = true;
     } catch (error) {
         console.error('Error loading category games:', error);
         const gamesContainer = document.getElementById('category-games');
@@ -41,6 +52,9 @@ function displayGames(categoryGames) {
         console.error('Category games container not found');
         return;
     }
+    
+    // 清空容器，确保不会重复添加游戏卡片
+    gamesContainer.innerHTML = '';
     
     if (categoryGames.length === 0) {
         gamesContainer.innerHTML = '<div class="col-span-full text-center py-8">该分类暂无游戏</div>';
