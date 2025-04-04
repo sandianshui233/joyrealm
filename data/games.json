@@ -1,6 +1,6 @@
-﻿[
+[
     {
-        "id":  1,
+        "id":  "1",
         "title":  "Funny Walk Fail Runr",
         "slug":  "funny-walk-fail-runr",
         "category":  "action",
@@ -8,10 +8,10 @@
         "thumbnail":  "assets/images/games/fwfr.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/3232d8d696ec4bc1989cd0b4a0ec1482/?gd_sdk_referrer_url=https://gamedistribution.com/games/funny-walk-fail-run/",
         "controls":  "Desktop: Control movement with mouse clicks. Mobile: Simply tap the screen to play. Easy to learn, endlessly entertaining!",
-        "featured":  true
+        "featured":  "TRUE"
     },
     {
-        "id":  2,
+        "id":  "2",
         "title":  "Vex X3Mr",
         "slug":  "vex-x3mr",
         "category":  "action",
@@ -19,10 +19,10 @@
         "thumbnail":  "assets/images/games/vx.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/0a3c55fe33ba415f9b761b5831e75b27/?gd_sdk_referrer_url=https://gamedistribution.com/games/vex-x3m/",
         "controls":  "Keyboard controls: Press Up/W to accelerate, Left/A and Right/D to tilt your bike, Down/S to brake. Stay alert to your surroundings and watch for traffic signs to strategically complete each challenge!",
-        "featured":  false
+        "featured":  "FALSE"
     },
     {
-        "id":  3,
+        "id":  "3",
         "title":  "Noob in Geometry Dash",
         "slug":  "noob-in-geometry-dash",
         "category":  "music",
@@ -30,21 +30,21 @@
         "thumbnail":  "assets/images/games/nigd.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/4d0faf326d03466baf7c0987d612c1a4/?gd_sdk_referrer_url=https://gamedistribution.com/games/noob-in-geometry-dash/",
         "controls":  "Controls are beautifully simple: press the screen to make your character fly in one direction; release to change flight direction immediately. Master this elegant control mechanism to sync perfectly with the music!",
-        "featured":  true
+        "featured":  "TRUE"
     },
     {
-        "id":  4,
+        "id":  "4",
         "title":  "Nuclear Day Survival",
         "slug":  "nuclear-day-survival",
         "category":  "action",
-        "description":  "Face the ultimate survival challenge in a post-nuclear world! This immersive survival game plunges you into a devastating post-apocalyptic reality where radiation, hunger, disease, and suffering are constant threats. Your mission: escape the dying city and find your long-lost love. Explore a uniquely atmospheric wasteland, uncover the mystery behind missing documents, and confront moral dilemmas—will you save those around you or leave them to their fate? Features include a meticulously designed crafting system, an emotionally engaging storyline, and a richly detailed world waiting to be explored.",
+        "description":  "Face the ultimate survival challenge in a post-nuclear world! This immersive survival game plunges you into a devastating post-apocalyptic reality where radiation, hunger, disease, and suffering are constant threats. Your mission: escape the dying city and find your long-lost love. Explore a uniquely atmospheric wasteland, uncover the mystery behind missing documents, and confront moral dilemmas??will you save those around you or leave them to their fate? Features include a meticulously designed crafting system, an emotionally engaging storyline, and a richly detailed world waiting to be explored.",
         "thumbnail":  "assets/images/games/nds.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/4601402ed7e84b14af02f7d6beff4cda/?gd_sdk_referrer_url=https://gamedistribution.com/games/nuclear-day-survival/",
         "controls":  "Desktop controls: WASD for movement, Left mouse button for interaction, E for inventory, J for tasks, M for store access. Mobile: Use touch screen to swipe for movement and tap to interact. Make wise choices in this wasteland to determine your survival!",
-        "featured":  true
+        "featured":  "TRUE"
     },
     {
-        "id":  5,
+        "id":  "5",
         "title":  "Power Light",
         "slug":  "power-light",
         "category":  "puzzle",
@@ -52,10 +52,10 @@
         "thumbnail":  "assets/images/games/pl.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/c95ab28500734643b709f0a53a9fcecf/?gd_sdk_referrer_url=https://gamedistribution.com/games/power-light-1/",
         "controls":  "Intuitive controls: Click or tap tiles to rotate them, adjusting circuit directions. Strategically complete connections to power up the light bulbs and unlock the next exciting challenge!",
-        "featured":  true
+        "featured":  "TRUE"
     },
     {
-        "id":  6,
+        "id":  "6",
         "title":  "Sprunki Beats",
         "slug":  "sprunki-beats",
         "category":  "music",
@@ -63,6 +63,105 @@
         "thumbnail":  "assets/images/games/sp.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/291267b4a60e40f9951be1d193dab421/?gd_sdk_referrer_url=https://gamedistribution.com/games/sprunki-beats/",
         "controls":  "Desktop players: Use mouse and left-click to follow the rhythm. Mobile players: Tap the screen in time with the musical beats. Simple controls, immersive musical experience!",
-        "featured":  false
+        "featured":  "FALSE"
+    },
+    {
+        "id":  "7",
+        "title":  "Draw War",
+        "slug":  "draw-war",
+        "category":  "action",
+        "description":  "Unleash your creativity in Draw War. This is a wonderful strategy game. Here drawing meets battles. Build a hero lineup, draw your legions, then unleash the power of your army. The numbers show the soldiers summoned. Click to send Shielded Soldiers, Soldiers on Horseback, or Super Beasts.",
+        "thumbnail":  "assets/images/games/acc.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/5fb9b774831843009ff37110468373d9/?gd_sdk_referrer_url=https://gamedistribution.com/games/draw-war/",
+        "controls":  "Mouse click or tap to play",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "8",
+        "title":  "Army Commander Craft",
+        "slug":  "army-commander-craft",
+        "category":  "action",
+        "description":  "Welcome to Army Commander Craft, a game full of strategy and shooting elements. As a commander, building and upgrading your army. Lead them into nervous battles against enemy forces.Command your army to begin nervous shooting battles. Defeat the enemy units with precision and strategy.",
+        "thumbnail":  "assets/images/games/acc.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/1475a4195a314c9dae80f2136622a89d/?gd_sdk_referrer_url=https://gamedistribution.com/games/army-commander-craft/",
+        "controls":  "Mouse click or tap to play",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "9",
+        "title":  "War State IO - Conquer Battles",
+        "slug":  "war-state-io-conquer-battles",
+        "category":  "action",
+        "description":  "Welcome to ultimate strategy game that lets you improve your tactical skills and lead your troops to triumph! Lead your army, conquer enemy camps, and expand your territory in fast-paced battles filled with action and strategy. Every decision matters ?? whether you??re attacking enemy strongholds or defending your bases, clever maneuvers are key to achieving victory.",
+        "thumbnail":  "assets/images/games/dyc.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/e1e486c81b0c4d738d4c1a05204f99c2/?gd_sdk_referrer_url=https://gamedistribution.com/games/war-state-io-conquer-battles/",
+        "controls":  "Drag your troops with your mouse/finger to the building you want to occupy. Occupy all enemy buildings to win.",
+        "featured":  "FALSE"
+    },
+    {
+        "id":  "10",
+        "title":  "\nDynamons Connect",
+        "slug":  "dynamons-connect",
+        "category":  "puzzle",
+        "description":  "Dive into the exciting world of Dynamons Connect! This fun and engaging game with adorable, colorful characters helps improve focus and visual perception. Match identical tiles by connecting them with a path that has no more than two turns to clear the board. With endless levels, the challenge never stops!",
+        "thumbnail":  "assets/images/games/das.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/c0b15af1bba044849416d45a56b481f4/?gd_sdk_referrer_url=https://gamedistribution.com/games/dynamons-connect/",
+        "controls":  "? Find two matching tiles and connect them with a path that has no more than two 90-degree angles. ? Clear the board before time runs out! ? Choose between two difficulty modes for the best experience. ? Keep playing as long as you want??unlimited levels mean unlimited fun!",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "11",
+        "title":  "Daily Sudoku",
+        "slug":  "daily-sudoku",
+        "category":  "puzzle",
+        "description":  "Daily Sudoku provides a thought-provoking journey that will keep you engrossed until every puzzle box is filled. If you enjoy challenging your intellect and sharpening your problem-solving skills, then you\u0027ve come to the perfect spot.",
+        "thumbnail":  "assets/images/games/wo2.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/dd9701cd84da40699cdc404645f29c1f/?gd_sdk_referrer_url=https://gamedistribution.com/games/daily-sudoku-2/",
+        "controls":  "The game\u0027s aim is to solve every row, column, and square without repeating numbers one through nine. Ultimately, the objective is to make sure that each row, column, and square contains the numbers one through nine without any duplicates, delivering an exceptional puzzle experience that demands concentration and perseverance.",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "12",
+        "title":  "WorldCraft 2",
+        "slug":  "worldCraft-2",
+        "category":  "puzzle",
+        "description":  "If you are a craft master. World Craft winter exploration ready for you. Show your skills craft your cubes and build cities, garden, your own house call your friends. Play with your friends new adventures. Features - Crafting cube - Graphics Improved - New worlds",
+        "thumbnail":  "assets/images/games/srnhv.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/5ab6c0365d0e44ff834bb2084fddf0b5/?gd_sdk_referrer_url=https://gamedistribution.com/games/worldcraft-2/",
+        "controls":  "Movement: W A S D Destruction : Left Click Build : Right Click Exit : Escape",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "13",
+        "title":  "Sprunki Retake (New Human Version) with Bonus",
+        "slug":  "sprunki-retake(new-human-version)with-bonus",
+        "category":  "music",
+        "description":  "Sprunki Retake New Human With New Bonus is a fan-created update to the Sprunki Retake mod, reworking the characters as humans while keeping the original game??s style. Designed as a musical creativity game, it lets players experiment with sound loops and animations using human-like versions of the classic Sprunki cast. Each character has distinct outfits, voices, and movements, adding personality without changing the core gameplay. There are a lot cool bonus characters like Huggy Wuggy, Sonic.EXE, Baldi, and more to unlock. There is total of 10 bonus characters, go and discover them all.",
+        "thumbnail":  "assets/images/games/wsicb.jpg",
+        "embedSrc":  "https://kdata1.com/2025/02/sprunki-retake-new-human-version-with-bonus/?key=y8\u0026value=default",
+        "controls":  "Drag and drop music object",
+        "featured":  "FALSE"
+    },
+    {
+        "id":  "14",
+        "title":  "Sprunki Parodybox",
+        "slug":  "sprunki-parodybox",
+        "category":  "music",
+        "description":  "Sprunki Parodybox is an innovative music creation game inspired by the famous Sprunki that allows players to immerse themselves in a magical world where they can experiment with new rhythms, effects and voices to create custom melodies. In addition, the game includes a horror mode that will add an extra layer of excitement to the experience, challenging players not only to create music, but also to keep their cool in the midst of spooky situations. Explore a series of all-new visuals and combine them with creative gameplay as you prepare to show off your ability to mix unique beats and effects. Enjoy playing this music game here at joyrealm.org!",
+        "thumbnail":  "assets/images/games/blobo.jpg",
+        "embedSrc":  "https://ext.minijuegosgratis.com/sprunki-parodybox-2/index.html?key=y8\u0026amp;value=default",
+        "controls":  "Drag and drop music object",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "15",
+        "title":  "Blob Opera",
+        "slug":  "blob-opera",
+        "category":  "music",
+        "description":  "Blob Opera Create your own opera-inspired song with Blob Opera. Let the blobs sing the songs and make beautiful music. Here we have elastic blobs they are really cute, they really love to sing each blob can sing at some particular pitch. Help the blobs to sing and let us have fun. Play this fun game only on joyrealm.org",
+        "thumbnail":  "assets/images/games/sppa.jpg",
+        "embedSrc":  "https://gacembed.withgoogle.com/blob-opera?key=y8\u0026amp;value=default#/",
+        "controls":  "\nHold and Drag",
+        "featured":  "TRUE"
     }
 ]

@@ -1,6 +1,6 @@
 ﻿[
     {
-        "id":  1,
+        "id":  "1",
         "title":  "Funny Walk Fail Runr",
         "slug":  "funny-walk-fail-runr",
         "category":  "action",
@@ -8,10 +8,10 @@
         "thumbnail":  "assets/images/games/fwfr.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/3232d8d696ec4bc1989cd0b4a0ec1482/?gd_sdk_referrer_url=https://gamedistribution.com/games/funny-walk-fail-run/",
         "controls":  "Desktop: Control movement with mouse clicks. Mobile: Simply tap the screen to play. Easy to learn, endlessly entertaining!",
-        "featured":  true
+        "featured":  "TRUE"
     },
     {
-        "id":  2,
+        "id":  "2",
         "title":  "Vex X3Mr",
         "slug":  "vex-x3mr",
         "category":  "action",
@@ -19,17 +19,50 @@
         "thumbnail":  "assets/images/games/vx.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/0a3c55fe33ba415f9b761b5831e75b27/?gd_sdk_referrer_url=https://gamedistribution.com/games/vex-x3m/",
         "controls":  "Keyboard controls: Press Up/W to accelerate, Left/A and Right/D to tilt your bike, Down/S to brake. Stay alert to your surroundings and watch for traffic signs to strategically complete each challenge!",
-        "featured":  false
+        "featured":  "FALSE"
     },
     {
-        "id":  4,
+        "id":  "4",
         "title":  "Nuclear Day Survival",
         "slug":  "nuclear-day-survival",
         "category":  "action",
-        "description":  "Face the ultimate survival challenge in a post-nuclear world! This immersive survival game plunges you into a devastating post-apocalyptic reality where radiation, hunger, disease, and suffering are constant threats. Your mission: escape the dying city and find your long-lost love. Explore a uniquely atmospheric wasteland, uncover the mystery behind missing documents, and confront moral dilemmas—will you save those around you or leave them to their fate? Features include a meticulously designed crafting system, an emotionally engaging storyline, and a richly detailed world waiting to be explored.",
+        "description":  "Face the ultimate survival challenge in a post-nuclear world! This immersive survival game plunges you into a devastating post-apocalyptic reality where radiation, hunger, disease, and suffering are constant threats. Your mission: escape the dying city and find your long-lost love. Explore a uniquely atmospheric wasteland, uncover the mystery behind missing documents, and confront moral dilemmas??will you save those around you or leave them to their fate? Features include a meticulously designed crafting system, an emotionally engaging storyline, and a richly detailed world waiting to be explored.",
         "thumbnail":  "assets/images/games/nds.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/4601402ed7e84b14af02f7d6beff4cda/?gd_sdk_referrer_url=https://gamedistribution.com/games/nuclear-day-survival/",
         "controls":  "Desktop controls: WASD for movement, Left mouse button for interaction, E for inventory, J for tasks, M for store access. Mobile: Use touch screen to swipe for movement and tap to interact. Make wise choices in this wasteland to determine your survival!",
-        "featured":  true
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "7",
+        "title":  "Draw War",
+        "slug":  "draw-war",
+        "category":  "action",
+        "description":  "Unleash your creativity in Draw War. This is a wonderful strategy game. Here drawing meets battles. Build a hero lineup, draw your legions, then unleash the power of your army. The numbers show the soldiers summoned. Click to send Shielded Soldiers, Soldiers on Horseback, or Super Beasts.",
+        "thumbnail":  "assets/images/games/acc.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/5fb9b774831843009ff37110468373d9/?gd_sdk_referrer_url=https://gamedistribution.com/games/draw-war/",
+        "controls":  "Mouse click or tap to play",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "8",
+        "title":  "Army Commander Craft",
+        "slug":  "army-commander-craft",
+        "category":  "action",
+        "description":  "Welcome to Army Commander Craft, a game full of strategy and shooting elements. As a commander, building and upgrading your army. Lead them into nervous battles against enemy forces.Command your army to begin nervous shooting battles. Defeat the enemy units with precision and strategy.",
+        "thumbnail":  "assets/images/games/acc.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/1475a4195a314c9dae80f2136622a89d/?gd_sdk_referrer_url=https://gamedistribution.com/games/army-commander-craft/",
+        "controls":  "Mouse click or tap to play",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "9",
+        "title":  "War State IO - Conquer Battles",
+        "slug":  "war-state-io-conquer-battles",
+        "category":  "action",
+        "description":  "Welcome to ultimate strategy game that lets you improve your tactical skills and lead your troops to triumph! Lead your army, conquer enemy camps, and expand your territory in fast-paced battles filled with action and strategy. Every decision matters ?? whether you??re attacking enemy strongholds or defending your bases, clever maneuvers are key to achieving victory.",
+        "thumbnail":  "assets/images/games/dyc.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/e1e486c81b0c4d738d4c1a05204f99c2/?gd_sdk_referrer_url=https://gamedistribution.com/games/war-state-io-conquer-battles/",
+        "controls":  "Drag your troops with your mouse/finger to the building you want to occupy. Occupy all enemy buildings to win.",
+        "featured":  "FALSE"
     }
 ]

@@ -1,6 +1,6 @@
 ﻿[
     {
-        "id":  3,
+        "id":  "3",
         "title":  "Noob in Geometry Dash",
         "slug":  "noob-in-geometry-dash",
         "category":  "music",
@@ -8,10 +8,10 @@
         "thumbnail":  "assets/images/games/nigd.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/4d0faf326d03466baf7c0987d612c1a4/?gd_sdk_referrer_url=https://gamedistribution.com/games/noob-in-geometry-dash/",
         "controls":  "Controls are beautifully simple: press the screen to make your character fly in one direction; release to change flight direction immediately. Master this elegant control mechanism to sync perfectly with the music!",
-        "featured":  true
+        "featured":  "TRUE"
     },
     {
-        "id":  6,
+        "id":  "6",
         "title":  "Sprunki Beats",
         "slug":  "sprunki-beats",
         "category":  "music",
@@ -19,6 +19,39 @@
         "thumbnail":  "assets/images/games/sp.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/291267b4a60e40f9951be1d193dab421/?gd_sdk_referrer_url=https://gamedistribution.com/games/sprunki-beats/",
         "controls":  "Desktop players: Use mouse and left-click to follow the rhythm. Mobile players: Tap the screen in time with the musical beats. Simple controls, immersive musical experience!",
-        "featured":  false
+        "featured":  "FALSE"
+    },
+    {
+        "id":  "13",
+        "title":  "Sprunki Retake (New Human Version) with Bonus",
+        "slug":  "sprunki-retake(new-human-version)with-bonus",
+        "category":  "music",
+        "description":  "Sprunki Retake New Human With New Bonus is a fan-created update to the Sprunki Retake mod, reworking the characters as humans while keeping the original game??s style. Designed as a musical creativity game, it lets players experiment with sound loops and animations using human-like versions of the classic Sprunki cast. Each character has distinct outfits, voices, and movements, adding personality without changing the core gameplay. There are a lot cool bonus characters like Huggy Wuggy, Sonic.EXE, Baldi, and more to unlock. There is total of 10 bonus characters, go and discover them all.",
+        "thumbnail":  "assets/images/games/wsicb.jpg",
+        "embedSrc":  "https://kdata1.com/2025/02/sprunki-retake-new-human-version-with-bonus/?key=y8\u0026value=default",
+        "controls":  "Drag and drop music object",
+        "featured":  "FALSE"
+    },
+    {
+        "id":  "14",
+        "title":  "Sprunki Parodybox",
+        "slug":  "sprunki-parodybox",
+        "category":  "music",
+        "description":  "Sprunki Parodybox is an innovative music creation game inspired by the famous Sprunki that allows players to immerse themselves in a magical world where they can experiment with new rhythms, effects and voices to create custom melodies. In addition, the game includes a horror mode that will add an extra layer of excitement to the experience, challenging players not only to create music, but also to keep their cool in the midst of spooky situations. Explore a series of all-new visuals and combine them with creative gameplay as you prepare to show off your ability to mix unique beats and effects. Enjoy playing this music game here at joyrealm.org!",
+        "thumbnail":  "assets/images/games/blobo.jpg",
+        "embedSrc":  "https://ext.minijuegosgratis.com/sprunki-parodybox-2/index.html?key=y8\u0026amp;value=default",
+        "controls":  "Drag and drop music object",
+        "featured":  "TRUE"
+    },
+    {
+        "id":  "15",
+        "title":  "Blob Opera",
+        "slug":  "blob-opera",
+        "category":  "music",
+        "description":  "Blob Opera Create your own opera-inspired song with Blob Opera. Let the blobs sing the songs and make beautiful music. Here we have elastic blobs they are really cute, they really love to sing each blob can sing at some particular pitch. Help the blobs to sing and let us have fun. Play this fun game only on joyrealm.org",
+        "thumbnail":  "assets/images/games/sppa.jpg",
+        "embedSrc":  "https://gacembed.withgoogle.com/blob-opera?key=y8\u0026amp;value=default#/",
+        "controls":  "\nHold and Drag",
+        "featured":  "TRUE"
     }
 ]
