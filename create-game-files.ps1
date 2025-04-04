@@ -65,6 +65,22 @@ foreach ($category in $categories) {
 # 获取分类页面模板
 $categoryTemplate = Get-Content "templates\category.html" -Raw
 
+# 分析 create-game-files.ps1 脚本问题
+
+通过检查 `create-game-files.ps1` 脚本，我发现了导致分类页面出现重复游戏框的问题所在。
+
+## 问题分析
+
+脚本中的问题出在第 96-132 行。当脚本为每个分类创建页面时，它会生成游戏卡片的 HTML 代码（`$gamesHtml`），但实际上并没有将这些代码插入到页面中。注释说"不修改HTML结构，依赖JavaScript动态加载游戏列表"，但脚本仍然生成了游戏卡片的 HTML。
+
+这导致了两个问题：
+1. 脚本生成了游戏卡片的 HTML 但没有使用它
+2. 同时，JavaScript 也在动态加载游戏卡片
+
+## 解决方案
+
+需要修改 `create-game-files.ps1` 脚本，确保它只创建基本的分类页面结构，而不生成任何游戏卡片的 HTML。
+
 # 为每个分类创建页面
 foreach ($category in $categories) {
     $categorySlug = $category.ToLower()
@@ -98,44 +114,53 @@ foreach ($category in $categories) {
         Write-Host "  Added GA code to: $categoryHtmlPath"
     }
     
+    # 移除以下代码块，不再生成静态游戏卡片HTML
     # 获取该分类的游戏
-    $categoryGames = $games | Where-Object { $_.category -eq $category }
+    # $categoryGames = $games | Where-Object { $_.category -eq $category }
     
     # 生成该分类的游戏卡片HTML
-    $gamesHtml = ""
-    foreach ($game in $categoryGames) {
-        $gamesHtml += @"
-                <!-- $($game.title) 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="$($game.id)">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../$($game.thumbnail)" 
-                            alt="$($game.title)"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="$($game.slug)">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">$($game.title)</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                
-"@
-    }
+    # $gamesHtml = ""
+    # foreach ($game in $categoryGames) {
+    #     $gamesHtml += @"
+    #             <!-- $($game.title) 游戏卡片 -->
+    #             <div class="arcade-cabinet" data-game-id="$($game.id)">
+    #                 <div class="cabinet-screen">
+    #                     <img 
+    #                         src="../$($game.thumbnail)" 
+    #                         alt="$($game.title)"
+    #                         loading="lazy"
+    #                     >
+    #                     <button class="play-btn" data-game-slug="$($game.slug)">PLAY NOW</button>
+    #                 </div>
+    #                 <div class="cabinet-title neon-text">$($game.title)</div>
+    #                 <div class="cabinet-controls">
+    #                     <div class="control-btn red"></div>
+    #                     <div class="control-btn blue"></div>
+    #                     <div class="control-btn green"></div>
+    #                     <div class="control-btn yellow"></div>
+    #                 </div>
+    #             </div>
+    #             
+    # "@
+    # }
     
     # 移除末尾的换行和空格
-    $gamesHtml = $gamesHtml.TrimEnd()
+    # $gamesHtml = $gamesHtml.TrimEnd()
     
-    # 不修改HTML结构，依赖JavaScript动态加载游戏列表
+    # 确保分类页面只包含空的游戏容器
     Write-Host "  Category page structure preserved. Games will be loaded via JavaScript."
-    $updatedHtml = $categoryHtml
     
-    # 写回分类页面
-    $updatedHtml | Set-Content $categoryHtmlPath -Encoding UTF8
+    # 检查是否需要更新页面结构，确保只有一个空的游戏容器
+    if ($categoryHtml -match "<!-- 游戏卡片将通过JavaScript动态加载 -->") {
+        Write-Host "  Category page already has the correct structure."
+    } else {
+        # 如果页面结构不正确，可以考虑更新它
+        # 但这里我们选择不修改现有页面，只确保新页面有正确的结构
+        Write-Host "  Note: Existing category page structure maintained."
+    }
+    
+    # 写回分类页面（如果有修改）
+    # $categoryHtml | Set-Content $categoryHtmlPath -Encoding UTF8
     Write-Host "  Category page updated: $categoryHtmlPath"
 }
 
