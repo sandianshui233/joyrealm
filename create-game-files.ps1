@@ -15,6 +15,19 @@ $games = Get-Content "data\games.json" -Raw | ConvertFrom-Json
 # 获取游戏模板
 $templateContent = Get-Content "templates\game.html" -Raw
 
+# Google Analytics 代码
+$gaCode = @"
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B41L93ERM8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B41L93ERM8');
+    </script>
+"@
+
 # 为每个游戏创建页面
 foreach ($game in $games) {
     Write-Host "Creating page for game: $($game.title)"
@@ -27,6 +40,12 @@ foreach ($game in $games) {
     $gameHtml = $gameHtml.Replace("{{GAME_CATEGORY}}", $game.category)
     $gameHtml = $gameHtml.Replace("{{GAME_CONTROLS}}", $game.controls)
     
+    # 检查是否已经包含GA代码
+    if ($gameHtml -notmatch "G-B41L93ERM8") {
+        # 在</head>前添加GA代码
+        $gameHtml = $gameHtml -replace "(?s)(<head>.*?)(?=</head>)", "`$1`n$gaCode"
+    }
+    
     $gamePath = "games\$($game.slug).html"
     $gameHtml | Set-Content $gamePath -Encoding UTF8
     Write-Host "  Page created: $gamePath"
@@ -37,112 +56,50 @@ $categories = $games | ForEach-Object { $_.category } | Select-Object -Unique
 
 # 为每个分类创建JSON文件
 foreach ($category in $categories) {
-    Write-Host "Creating JSON for category: $category"
-    
     $categoryGames = $games | Where-Object { $_.category -eq $category }
-    $categoryPath = "data\categories\$category.json"
+    $categoryPath = "data\categories\$($category.ToLower()).json"
     $categoryGames | ConvertTo-Json -Depth 10 | Set-Content $categoryPath -Encoding UTF8
-    Write-Host "  JSON created: $categoryPath"
+    Write-Host "Category JSON created: $categoryPath"
+}
+
+# 获取分类页面模板
+$categoryTemplate = Get-Content "templates\category.html" -Raw
+
+# 为每个分类创建页面
+foreach ($category in $categories) {
+    $categorySlug = $category.ToLower()
+    $categoryHtmlPath = "categories\$categorySlug.html"
     
-    # 更新分类页面HTML
-    $categoryHtmlPath = "categories\$category.html"
-    
-    # 如果分类页面不存在，创建一个基础模板
+    # 检查分类页面是否已存在
     if (!(Test-Path $categoryHtmlPath)) {
-        $categoryTitle = (Get-Culture).TextInfo.ToTitleCase($category)
-        $categoryDescription = "Explore our collection of $category games."
+        Write-Host "Creating new category page: $categoryHtmlPath"
         
-        if ($category -eq "action") {
-            $categoryDescription = "Experience the thrill of fast-paced gameplay with our collection of action games. Test your reflexes and skills in these exciting adventures."
-        } elseif ($category -eq "puzzle") {
-            $categoryDescription = "Challenge your mind with our collection of puzzle games. Solve complex problems, test your logic and enjoy strategic thinking in these brain-teasing adventures."
-        } elseif ($category -eq "music") {
-            $categoryDescription = "Feel the rhythm and beat with our collection of music games. Move to the melody, test your timing and express yourself in these interactive musical experiences."
+        # 创建基础模板
+        $baseTemplate = $categoryTemplate
+        $baseTemplate = $baseTemplate.Replace("{{CATEGORY_NAME}}", $category)
+        $baseTemplate = $baseTemplate.Replace("{{CATEGORY_SLUG}}", $categorySlug)
+        
+        # 检查是否已经包含GA代码
+        if ($baseTemplate -notmatch "G-B41L93ERM8") {
+            # 在</head>前添加GA代码
+            $baseTemplate = $baseTemplate -replace "(?s)(<head>.*?)(?=</head>)", "`$1`n$gaCode"
         }
         
-        $baseTemplate = @"
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$categoryTitle Games - JoyRealm</title>
-    <meta name="description" content="Explore exciting $category games on JoyRealm">
-    <link rel="canonical" href="https://joyrealm.org/categories/$category.html">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/arcade.css?v=1.0.0">
-</head>
-
-<body class="arcade-body">
-    <!-- CRT屏幕效果覆盖层 -->
-    <div class="crt-overlay"></div>
-    
-    <!-- 头部 -->
-    <header class="arcade-header">
-        <div class="logo-container">
-            <a href="/" class="arcade-logo">
-                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
-            </a>
-        </div>
-        <nav class="arcade-nav">
-            <a href="/" class="nav-btn">Home</a>
-            <a href="/categories/action.html" class="nav-btn$($category -eq "action" ? " active" : "")">Action</a>
-            <a href="/categories/puzzle.html" class="nav-btn$($category -eq "puzzle" ? " active" : "")">Puzzle</a>
-            <a href="/categories/music.html" class="nav-btn$($category -eq "music" ? " active" : "")">Music</a>
-        </nav>
-        <div class="coin-slot">
-            <button class="insert-coin-btn">INSERT COIN</button>
-            <div class="coin-counter">CREDITS: 0</div>
-        </div>
-    </header>
-    
-    <main class="arcade-hall">
-        <!-- 类别标题 -->
-        <section class="category-header">
-            <h1 class="category-title neon-green">$categoryTitle.ToUpper() GAMES</h1>
-            <p class="category-description">
-                $categoryDescription
-            </p>
-        </section>
-        
-        <!-- 游戏列表 -->
-        <section class="games-grid">
-            <div id="category-games" class="arcade-machines category-games">
-                <!-- 游戏卡片将在此处生成 -->
-            </div>
-        </section>
-    </main>
-    
-    <footer class="arcade-footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
-            </div>
-            <p class="copyright">© $([DateTime]::Now.Year) Joyrealm. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- 音效资源 -->
-    <audio id="coin-sound" src="../assets/sounds/coin.mp3" preload="auto"></audio>
-    <audio id="button-sound" src="../assets/sounds/button-press.mp3" preload="auto"></audio>
-    
-    <!-- 脚本 -->
-    <script src="../assets/js/arcade-effects.js"></script>
-    <script src="../assets/js/category.js"></script>
-</body>
-</html>
-"@
         $baseTemplate | Set-Content $categoryHtmlPath -Encoding UTF8
     }
     
     # 读取分类页面
     $categoryHtml = Get-Content $categoryHtmlPath -Raw
+    
+    # 如果页面不包含GA代码，添加它
+    if ($categoryHtml -notmatch "G-B41L93ERM8") {
+        $categoryHtml = $categoryHtml -replace "(?s)(<head>.*?)(?=</head>)", "`$1`n$gaCode"
+        $categoryHtml | Set-Content $categoryHtmlPath -Encoding UTF8
+        Write-Host "  Added GA code to: $categoryHtmlPath"
+    }
+    
+    # 获取该分类的游戏
+    $categoryGames = $games | Where-Object { $_.category -eq $category }
     
     # 生成该分类的游戏卡片HTML
     $gamesHtml = ""
@@ -181,6 +138,19 @@ foreach ($category in $categories) {
     # 写回分类页面
     $updatedHtml | Set-Content $categoryHtmlPath -Encoding UTF8
     Write-Host "  Category page updated: $categoryHtmlPath"
+}
+
+# 检查首页是否包含GA代码
+$indexPath = "index.html"
+if (Test-Path $indexPath) {
+    $indexHtml = Get-Content $indexPath -Raw
+    if ($indexHtml -notmatch "G-B41L93ERM8") {
+        $indexHtml = $indexHtml -replace "(?s)(<head>.*?)(?=</head>)", "`$1`n$gaCode"
+        $indexHtml | Set-Content $indexPath -Encoding UTF8
+        Write-Host "Added GA code to index.html"
+    } else {
+        Write-Host "index.html already contains GA code"
+    }
 }
 
 Write-Host "Done! All game files and category pages have been created or updated."

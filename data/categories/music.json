@@ -4,10 +4,10 @@
         "title":  "Noob in Geometry Dash",
         "slug":  "noob-in-geometry-dash",
         "category":  "music",
-        "description":  "Move to the rhythm and help Nubik navigate challenging levels! Collect keys to unlock skins, complete courses, and see how high you can rank among the best players. Step into the beat-driven adventure!",
+        "description":  "Jump to the beat in this rhythm-driven musical adventure! Guide Nubik through a world of beat-synced challenges that test your timing and reflexes. Perfect your jumps to the music, collect hidden keys to unlock awesome character skins, and master increasingly difficult levels that blend music and skill in perfect harmony. Each stage challenges your reaction time and rhythm sense in new ways. Complete all courses and compete for top rankings on the global leaderboard. Are you ready to embark on this musical journey?",
         "thumbnail":  "assets/images/games/nigd.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/4d0faf326d03466baf7c0987d612c1a4/?gd_sdk_referrer_url=https://gamedistribution.com/games/noob-in-geometry-dash/",
-        "controls":  "To control the character, press or release the screen. If you press it, he flies in one direction, if you release it, he flies in the other direction.",
+        "controls":  "Controls are beautifully simple: press the screen to make your character fly in one direction; release to change flight direction immediately. Master this elegant control mechanism to sync perfectly with the music!",
         "featured":  true
     },
     {
@@ -15,10 +15,10 @@
         "title":  "Sprunki Beats",
         "slug":  "sprunki-beats",
         "category":  "music",
-        "description":  "Sprunki Beats takes you on a rhythmic adventure through four exciting levels, featuring both horror and normal modes. Explore unique environments as you master the beats and uncover secrets. Fans of Sprunki will love the thrilling challenges, including hints of Mustard mods and connections to the iconic Phase 5. What is Sprunki? It鈥檚 the ultimate rhythm game experience, blending mystery and excitement. Dive into Sprunki Beats and prove your skills in this must-play journey!",
+        "description":  "Master the rhythm in this ultimate musical challenge! Sprunki Beats takes you on a pulsating journey through four exhilarating levels featuring both horror and standard game modes. Explore distinctive environments while mastering precise beats and uncovering hidden secrets. Fans of rhythm games will appreciate the thrilling challenges, including nods to Mustard mods and connections to the iconic Phase 5. Sprunki delivers the perfect blend of mystery and excitement in this rhythm game masterpiece. Dive into this musical adventure and prove your skills as a rhythm master!",
         "thumbnail":  "assets/images/games/sp.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/291267b4a60e40f9951be1d193dab421/?gd_sdk_referrer_url=https://gamedistribution.com/games/sprunki-beats/",
-        "controls":  "On Desktop: Use MOUSE and LEFT-CLICK On Mobile: Use Touch Controls",
+        "controls":  "Desktop players: Use mouse and left-click to follow the rhythm. Mobile players: Tap the screen in time with the musical beats. Simple controls, immersive musical experience!",
         "featured":  false
     }
 ]

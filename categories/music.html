@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,13 +9,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/arcade.css?v=1.0.0">
-</head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B41L93ERM8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B41L93ERM8');
+    </script></head>
 
 <body class="arcade-body">
-    <!-- CRT屏幕效果覆盖层 -->
+    <!-- CRT灞忓箷鏁堟灉瑕嗙洊灞?-->
     <div class="crt-overlay"></div>
     
-    <!-- 头部 -->
+    <!-- 澶撮儴 -->
     <header class="arcade-header">
         <div class="logo-container">
             <a href="/" class="arcade-logo">
@@ -35,7 +44,7 @@
     </header>
     
     <main class="arcade-hall">
-        <!-- 类别标题 -->
+        <!-- 绫诲埆鏍囬 -->
         <section class="category-header">
             <h1 class="category-title neon-green">MUSIC GAMES</h1>
             <p class="category-description">
@@ -44,10 +53,10 @@
             </p>
         </section>
         
-        <!-- 游戏列表 -->
+        <!-- 娓告垙鍒楄〃 -->
         <section class="games-grid">
             <div id="category-games" class="arcade-machines category-games">
-                <!-- Noob in Geometry Dash 游戏卡片 -->
+                <!-- Noob in Geometry Dash 娓告垙鍗＄墖 -->
                 <div class="arcade-cabinet" data-game-id="3">
                     <div class="cabinet-screen">
                         <img 
@@ -65,8 +74,89 @@
                         <div class="control-btn yellow"></div>
                     </div>
                 </div>
+                                <!-- Sprunki Beats 娓告垙鍗＄墖 -->
+                <div class="arcade-cabinet" data-game-id="6">
+                    <div class="cabinet-screen">
+                        <img 
+                            src="../assets/images/games/sp.jpg" 
+                            alt="Sprunki Beats"
+                            loading="lazy"
+                        >
+                        <button class="play-btn" data-game-slug="sprunki-beats">PLAY NOW</button>
+                    </div>
+                    <div class="cabinet-title neon-text">Sprunki Beats</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
+                </div>
+            </div>
+                    <div class="cabinet-title neon-text">Noob in Geometry Dash</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
+                </div>
+                                <!-- Sprunki Beats 娓告垙鍗＄墖 -->
+                <div class="arcade-cabinet" data-game-id="6">
+                    <div class="cabinet-screen">
+                        <img 
+                            src="../assets/images/games/sp.jpg" 
+                            alt="Sprunki Beats"
+                            loading="lazy"
+                        >
+                        <button class="play-btn" data-game-slug="sprunki-beats">PLAY NOW</button>
+                    </div>
+                    <div class="cabinet-title neon-text">Sprunki Beats</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
+                </div>
+            </div>
+                    <div class="cabinet-title neon-text">Noob in Geometry Dash</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
+                </div>
+                                <!-- Sprunki Beats 娓告垙鍗＄墖 -->
+                <div class="arcade-cabinet" data-game-id="6">
+                    <div class="cabinet-screen">
+                        <img 
+                            src="../assets/images/games/sp.jpg" 
+                            alt="Sprunki Beats"
+                            loading="lazy"
+                        >
+                        <button class="play-btn" data-game-slug="sprunki-beats">PLAY NOW</button>
+                    </div>
+                    <div class="cabinet-title neon-text">Sprunki Beats</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
+                </div>
+            </div>
+                    <div class="cabinet-title neon-text">Noob in Geometry Dash</div>
+                    <div class="cabinet-controls">
+                        <div class="control-btn red"></div>
+                        <div class="control-btn blue"></div>
+                        <div class="control-btn green"></div>
+                        <div class="control-btn yellow"></div>
+                    </div>
+                </div>
                 
-                <!-- Sprunki Beats 游戏卡片 -->
+                <!-- Sprunki Beats 娓告垙鍗＄墖 -->
                 <div class="arcade-cabinet" data-game-id="6">
                     <div class="cabinet-screen">
                         <img 
@@ -93,7 +183,7 @@
             <div class="footer-logo">
                 <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
             </div>
-            <p class="copyright">© 2023 Joyrealm. All rights reserved.</p>
+            <p class="copyright">漏 2023 Joyrealm. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
@@ -102,12 +192,15 @@
         </div>
     </footer>
     
-    <!-- 音效资源 -->
+    <!-- 闊虫晥璧勬簮 -->
     <audio id="coin-sound" src="../assets/sounds/coin.mp3" preload="auto"></audio>
     <audio id="button-sound" src="../assets/sounds/button-press.mp3" preload="auto"></audio>
     
-    <!-- 脚本 -->
+    <!-- 鑴氭湰 -->
     <script src="../assets/js/arcade-effects.js"></script>
     <script src="../assets/js/category.js"></script>
 </body>
 </html>
+
+
+

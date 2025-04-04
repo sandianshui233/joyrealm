@@ -1,69 +1,68 @@
-
-[
-  {
-    "id": 1,
-    "title": "Funny Walk Fail Runr",
-    "slug": "funny-walk-fail-runr",
-    "category": "action",
-    "description": "Funny Walk Fail Run is a fun-filled arcade action game with funny and magical gameplay! You will control a villain in the game to do challenges. But don't expect him to walk steadily, because he always falls and bumps in all sorts of funny positions! Your job is to help him navigate each step of the shaky road.",
-    "thumbnail": "assets/images/games/fwfr.jpg",
-    "embedSrc": "https://html5.gamedistribution.com/3232d8d696ec4bc1989cd0b4a0ec1482/?gd_sdk_referrer_url=https://gamedistribution.com/games/funny-walk-fail-run/",
-    "controls": "Mouse click or tap to play",
-    "featured": true
-  },
-  {
-    "id": 2,
-    "title": "Vex X3Mr",
-    "slug": "vex-x3mr",
-    "category": "action",
-    "description": "VEX X3M, a new extreme hill racing game with bike stunts and obstacles, is here! Enjoy the classic Vex elements, but this time you will be racing your way to the finish line! Perform crazy bike stunts in 30 unique levels filled with danger - from spikes and shooting knives to rockets and lasers. Reach the finish safely and obtain stars to unlock new unique bike skins. Complete all levels in easy and hard mode to crown yourself a master VEX X3M Rider. Start your engines and enjoy VEX X3M!",
-    "thumbnail": "assets/images/games/vx.jpg",
-    "embedSrc": "https://html5.gamedistribution.com/0a3c55fe33ba415f9b761b5831e75b27/?gd_sdk_referrer_url=https://gamedistribution.com/games/vex-x3m/",
-    "controls": "Press up (or W) to accelerate, use left (or A) and right (or D) to tilt your bike and press backwards (or S) to brake. Look at your surroundings and pay attention to all the traffic signs! Good luck!",
-    "featured": false
-  },
-  {
-    "id": 3,
-    "title": "Noob in Geometry Dash",
-    "slug": "noob-in-geometry-dash",
-    "category": "music",
-    "description": "Move to the rhythm and help Nubik navigate challenging levels! Collect keys to unlock skins, complete courses, and see how high you can rank among the best players. Step into the beat-driven adventure!",
-    "thumbnail": "assets/images/games/nigd.jpg",
-    "embedSrc": "https://html5.gamedistribution.com/4d0faf326d03466baf7c0987d612c1a4/?gd_sdk_referrer_url=https://gamedistribution.com/games/noob-in-geometry-dash/",
-    "controls": "To control the character, press or release the screen. If you press it, he flies in one direction, if you release it, he flies in the other direction.",
-    "featured": true
-  },
-  {
-    "id": 4,
-    "title": "Nuclear Day Survival",
-    "slug": "nuclear-day-survival",
-    "category": "action",
-    "description": "Can you survive in a world where there was a nuclear explosion? There is radiation, hunger, disease and suffering around you. Your goal is to escape the dying city and find the love of your youth. A unique atmosphere and a heart-piercing plot. Uncover the mystery of the missing documents and make a choice: save the people around you or leave them to die.. Peculiarities: — Crafting system — Unique plot — Exploring an interesting world",
-    "thumbnail": "assets/images/games/nds.jpg",
-    "embedSrc": "https://html5.gamedistribution.com/4601402ed7e84b14af02f7d6beff4cda/?gd_sdk_referrer_url=https://gamedistribution.com/games/nuclear-day-survival/",
-    "controls": "The goal of the game is to survive in an apocalyptic world after a nuclear explosion by uncovering secrets and making moral choices, including saving others or acting in your own self-interest. Controls on desktop: WASD for movement, Left mouse button for interaction, E for inventory, J for tasks, M for store. Control on a mobile device: touch/swipe.",
-    "featured": true
-  },
-  {
-    "id": 5,
-    "title": "Power Light",
-    "slug": "power-light",
-    "category": "puzzle",
-    "description": "Move the tiles around until the power can flow freely to the light bulb. Power up the light bulb to complete each level in this fun online puzzle game",
-    "thumbnail": "assets/images/games/pl.jpg",
-    "embedSrc": "https://html5.gamedistribution.com/c95ab28500734643b709f0a53a9fcecf/?gd_sdk_referrer_url=https://gamedistribution.com/games/power-light-1/",
-    "controls": "Click or tap to rotate the tiles",
-    "featured": true
-  },
-  {
-    "id": 6,
-    "title": "Sprunki Beats",
-    "slug": "sprunki-beats",
-    "category": "music",
-    "description": "Sprunki Beats takes you on a rhythmic adventure through four exciting levels, featuring both horror and normal modes. Explore unique environments as you master the beats and uncover secrets. Fans of Sprunki will love the thrilling challenges, including hints of Mustard mods and connections to the iconic Phase 5. What is Sprunki? It’s the ultimate rhythm game experience, blending mystery and excitement. Dive into Sprunki Beats and prove your skills in this must-play journey!",
-    "thumbnail": "assets/images/games/sp.jpg",
-    "embedSrc": "https://html5.gamedistribution.com/291267b4a60e40f9951be1d193dab421/?gd_sdk_referrer_url=https://gamedistribution.com/games/sprunki-beats/",
-    "controls": "On Desktop: Use MOUSE and LEFT-CLICK On Mobile: Use Touch Controls",
-    "featured": false
-  }
+﻿[
+    {
+        "id":  1,
+        "title":  "Funny Walk Fail Runr",
+        "slug":  "funny-walk-fail-runr",
+        "category":  "action",
+        "description":  "Challenge yourself in this hilarious walking simulator! Take control of a wobbly villain who constantly stumbles into comedic mishaps. Every step brings unpredictable tumbles and amusing collisions in this action-packed arcade game. Navigate through increasingly unstable paths as you help your clumsy character complete various challenges. With simple controls but challenging gameplay, Funny Walk Fail Runr delivers non-stop laughter and entertainment for players of all ages!",
+        "thumbnail":  "assets/images/games/fwfr.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/3232d8d696ec4bc1989cd0b4a0ec1482/?gd_sdk_referrer_url=https://gamedistribution.com/games/funny-walk-fail-run/",
+        "controls":  "Desktop: Control movement with mouse clicks. Mobile: Simply tap the screen to play. Easy to learn, endlessly entertaining!",
+        "featured":  true
+    },
+    {
+        "id":  2,
+        "title":  "Vex X3Mr",
+        "slug":  "vex-x3mr",
+        "category":  "action",
+        "description":  "Extreme biking challenge awaits! Vex X3M masterfully combines classic Vex elements with thrilling mountain bike racing action. Navigate through 30 danger-filled unique levels, avoiding deadly obstacles including spikes, shooting knives, rockets, and lasers. Perform daring stunts, reach the finish line safely, and collect stars to unlock exclusive bike skins. Prove your mastery by conquering both easy and hard modes to become the ultimate Vex X3M rider champion. Rev up your engines and experience the perfect blend of speed, skill and adrenaline!",
+        "thumbnail":  "assets/images/games/vx.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/0a3c55fe33ba415f9b761b5831e75b27/?gd_sdk_referrer_url=https://gamedistribution.com/games/vex-x3m/",
+        "controls":  "Keyboard controls: Press Up/W to accelerate, Left/A and Right/D to tilt your bike, Down/S to brake. Stay alert to your surroundings and watch for traffic signs to strategically complete each challenge!",
+        "featured":  false
+    },
+    {
+        "id":  3,
+        "title":  "Noob in Geometry Dash",
+        "slug":  "noob-in-geometry-dash",
+        "category":  "music",
+        "description":  "Jump to the beat in this rhythm-driven musical adventure! Guide Nubik through a world of beat-synced challenges that test your timing and reflexes. Perfect your jumps to the music, collect hidden keys to unlock awesome character skins, and master increasingly difficult levels that blend music and skill in perfect harmony. Each stage challenges your reaction time and rhythm sense in new ways. Complete all courses and compete for top rankings on the global leaderboard. Are you ready to embark on this musical journey?",
+        "thumbnail":  "assets/images/games/nigd.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/4d0faf326d03466baf7c0987d612c1a4/?gd_sdk_referrer_url=https://gamedistribution.com/games/noob-in-geometry-dash/",
+        "controls":  "Controls are beautifully simple: press the screen to make your character fly in one direction; release to change flight direction immediately. Master this elegant control mechanism to sync perfectly with the music!",
+        "featured":  true
+    },
+    {
+        "id":  4,
+        "title":  "Nuclear Day Survival",
+        "slug":  "nuclear-day-survival",
+        "category":  "action",
+        "description":  "Face the ultimate survival challenge in a post-nuclear world! This immersive survival game plunges you into a devastating post-apocalyptic reality where radiation, hunger, disease, and suffering are constant threats. Your mission: escape the dying city and find your long-lost love. Explore a uniquely atmospheric wasteland, uncover the mystery behind missing documents, and confront moral dilemmas—will you save those around you or leave them to their fate? Features include a meticulously designed crafting system, an emotionally engaging storyline, and a richly detailed world waiting to be explored.",
+        "thumbnail":  "assets/images/games/nds.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/4601402ed7e84b14af02f7d6beff4cda/?gd_sdk_referrer_url=https://gamedistribution.com/games/nuclear-day-survival/",
+        "controls":  "Desktop controls: WASD for movement, Left mouse button for interaction, E for inventory, J for tasks, M for store access. Mobile: Use touch screen to swipe for movement and tap to interact. Make wise choices in this wasteland to determine your survival!",
+        "featured":  true
+    },
+    {
+        "id":  5,
+        "title":  "Power Light",
+        "slug":  "power-light",
+        "category":  "puzzle",
+        "description":  "Illuminate your mind with this electrifying puzzle challenge! In this cleverly designed brain teaser, you\u0027ll manipulate and rotate various tiles to create complete electrical circuits, allowing power to flow freely to light bulbs. Each level presents a unique layout with increasing difficulty as you progress. Exercise your logical thinking and spatial reasoning to find optimal solutions and light up every bulb. Simple to learn but progressively challenging, each completed level delivers a satisfying sense of accomplishment!",
+        "thumbnail":  "assets/images/games/pl.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/c95ab28500734643b709f0a53a9fcecf/?gd_sdk_referrer_url=https://gamedistribution.com/games/power-light-1/",
+        "controls":  "Intuitive controls: Click or tap tiles to rotate them, adjusting circuit directions. Strategically complete connections to power up the light bulbs and unlock the next exciting challenge!",
+        "featured":  true
+    },
+    {
+        "id":  6,
+        "title":  "Sprunki Beats",
+        "slug":  "sprunki-beats",
+        "category":  "music",
+        "description":  "Master the rhythm in this ultimate musical challenge! Sprunki Beats takes you on a pulsating journey through four exhilarating levels featuring both horror and standard game modes. Explore distinctive environments while mastering precise beats and uncovering hidden secrets. Fans of rhythm games will appreciate the thrilling challenges, including nods to Mustard mods and connections to the iconic Phase 5. Sprunki delivers the perfect blend of mystery and excitement in this rhythm game masterpiece. Dive into this musical adventure and prove your skills as a rhythm master!",
+        "thumbnail":  "assets/images/games/sp.jpg",
+        "embedSrc":  "https://html5.gamedistribution.com/291267b4a60e40f9951be1d193dab421/?gd_sdk_referrer_url=https://gamedistribution.com/games/sprunki-beats/",
+        "controls":  "Desktop players: Use mouse and left-click to follow the rhythm. Mobile players: Tap the screen in time with the musical beats. Simple controls, immersive musical experience!",
+        "featured":  false
+    }
 ]

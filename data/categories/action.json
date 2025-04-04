@@ -4,10 +4,10 @@
         "title":  "Funny Walk Fail Runr",
         "slug":  "funny-walk-fail-runr",
         "category":  "action",
-        "description":  "Funny Walk Fail Run is a fun-filled arcade action game with funny and magical gameplay! You will control a villain in the game to do challenges. But don\u0027t expect him to walk steadily, because he always falls and bumps in all sorts of funny positions! Your job is to help him navigate each step of the shaky road.",
+        "description":  "Challenge yourself in this hilarious walking simulator! Take control of a wobbly villain who constantly stumbles into comedic mishaps. Every step brings unpredictable tumbles and amusing collisions in this action-packed arcade game. Navigate through increasingly unstable paths as you help your clumsy character complete various challenges. With simple controls but challenging gameplay, Funny Walk Fail Runr delivers non-stop laughter and entertainment for players of all ages!",
         "thumbnail":  "assets/images/games/fwfr.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/3232d8d696ec4bc1989cd0b4a0ec1482/?gd_sdk_referrer_url=https://gamedistribution.com/games/funny-walk-fail-run/",
-        "controls":  "Mouse click or tap to play",
+        "controls":  "Desktop: Control movement with mouse clicks. Mobile: Simply tap the screen to play. Easy to learn, endlessly entertaining!",
         "featured":  true
     },
     {
@@ -15,10 +15,10 @@
         "title":  "Vex X3Mr",
         "slug":  "vex-x3mr",
         "category":  "action",
-        "description":  "VEX X3M, a new extreme hill racing game with bike stunts and obstacles, is here! Enjoy the classic Vex elements, but this time you will be racing your way to the finish line! Perform crazy bike stunts in 30 unique levels filled with danger - from spikes and shooting knives to rockets and lasers. Reach the finish safely and obtain stars to unlock new unique bike skins. Complete all levels in easy and hard mode to crown yourself a master VEX X3M Rider. Start your engines and enjoy VEX X3M!",
+        "description":  "Extreme biking challenge awaits! Vex X3M masterfully combines classic Vex elements with thrilling mountain bike racing action. Navigate through 30 danger-filled unique levels, avoiding deadly obstacles including spikes, shooting knives, rockets, and lasers. Perform daring stunts, reach the finish line safely, and collect stars to unlock exclusive bike skins. Prove your mastery by conquering both easy and hard modes to become the ultimate Vex X3M rider champion. Rev up your engines and experience the perfect blend of speed, skill and adrenaline!",
         "thumbnail":  "assets/images/games/vx.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/0a3c55fe33ba415f9b761b5831e75b27/?gd_sdk_referrer_url=https://gamedistribution.com/games/vex-x3m/",
-        "controls":  "Press up (or W) to accelerate, use left (or A) and right (or D) to tilt your bike and press backwards (or S) to brake. Look at your surroundings and pay attention to all the traffic signs! Good luck!",
+        "controls":  "Keyboard controls: Press Up/W to accelerate, Left/A and Right/D to tilt your bike, Down/S to brake. Stay alert to your surroundings and watch for traffic signs to strategically complete each challenge!",
         "featured":  false
     },
     {
@@ -26,10 +26,10 @@
         "title":  "Nuclear Day Survival",
         "slug":  "nuclear-day-survival",
         "category":  "action",
-        "description":  "Can you survive in a world where there was a nuclear explosion? There is radiation, hunger, disease and suffering around you. Your goal is to escape the dying city and find the love of your youth. A unique atmosphere and a heart-piercing plot. Uncover the mystery of the missing documents and make a choice: save the people around you or leave them to die.. Peculiarities: 鈥?Crafting system 鈥?Unique plot 鈥?Exploring an interesting world",
+        "description":  "Face the ultimate survival challenge in a post-nuclear world! This immersive survival game plunges you into a devastating post-apocalyptic reality where radiation, hunger, disease, and suffering are constant threats. Your mission: escape the dying city and find your long-lost love. Explore a uniquely atmospheric wasteland, uncover the mystery behind missing documents, and confront moral dilemmas—will you save those around you or leave them to their fate? Features include a meticulously designed crafting system, an emotionally engaging storyline, and a richly detailed world waiting to be explored.",
         "thumbnail":  "assets/images/games/nds.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/4601402ed7e84b14af02f7d6beff4cda/?gd_sdk_referrer_url=https://gamedistribution.com/games/nuclear-day-survival/",
-        "controls":  "The goal of the game is to survive in an apocalyptic world after a nuclear explosion by uncovering secrets and making moral choices, including saving others or acting in your own self-interest. Controls on desktop: WASD for movement, Left mouse button for interaction, E for inventory, J for tasks, M for store. Control on a mobile device: touch/swipe.",
+        "controls":  "Desktop controls: WASD for movement, Left mouse button for interaction, E for inventory, J for tasks, M for store access. Mobile: Use touch screen to swipe for movement and tap to interact. Make wise choices in this wasteland to determine your survival!",
         "featured":  true
     }
 ]

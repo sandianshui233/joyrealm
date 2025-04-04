@@ -3,9 +3,9 @@
     "title":  "Power Light",
     "slug":  "power-light",
     "category":  "puzzle",
-    "description":  "Move the tiles around until the power can flow freely to the light bulb. Power up the light bulb to complete each level in this fun online puzzle game",
+    "description":  "Illuminate your mind with this electrifying puzzle challenge! In this cleverly designed brain teaser, you\u0027ll manipulate and rotate various tiles to create complete electrical circuits, allowing power to flow freely to light bulbs. Each level presents a unique layout with increasing difficulty as you progress. Exercise your logical thinking and spatial reasoning to find optimal solutions and light up every bulb. Simple to learn but progressively challenging, each completed level delivers a satisfying sense of accomplishment!",
     "thumbnail":  "assets/images/games/pl.jpg",
     "embedSrc":  "https://html5.gamedistribution.com/c95ab28500734643b709f0a53a9fcecf/?gd_sdk_referrer_url=https://gamedistribution.com/games/power-light-1/",
-    "controls":  "Click or tap to rotate the tiles",
+    "controls":  "Intuitive controls: Click or tap tiles to rotate them, adjusting circuit directions. Strategically complete connections to power up the light bulbs and unlock the next exciting challenge!",
     "featured":  true
 }
