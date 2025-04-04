@@ -8,62 +8,76 @@ async function loadCategoryGames() {
         const categorySlug = currentPath.split('/').pop().replace('.html', '');
         
         // 加载所有游戏
-        const response = await fetch('../data/games.json');
+        const response = await fetch('../data/categories/' + categorySlug + '.json');
         if (!response.ok) {
-            throw new Error('Failed to load game data');
+            // 如果特定分类的JSON不存在，尝试加载所有游戏
+            const allGamesResponse = await fetch('../data/games.json');
+            if (!allGamesResponse.ok) {
+                throw new Error('Failed to load game data');
+            }
+            
+            const games = await allGamesResponse.json();
+            // 过滤当前分类的游戏
+            const categoryGames = games.filter(game => game.category === categorySlug);
+            displayGames(categoryGames);
+        } else {
+            // 直接使用分类特定的JSON
+            const categoryGames = await response.json();
+            displayGames(categoryGames);
         }
-        
-        const games = await response.json();
-        
-        // 过滤当前分类的游戏
-        const categoryGames = games.filter(game => game.category === categorySlug);
-        
-        const gamesContainer = document.getElementById('category-games');
-        if (!gamesContainer) {
-            console.error('Category games container not found');
-            return;
-        }
-        
-        if (categoryGames.length === 0) {
-            gamesContainer.innerHTML = '<div class="col-span-full text-center py-8">No games available in this category</div>';
-            return;
-        }
-        
-        let html = '';
-        categoryGames.forEach(game => {
-            html += `
-            <div class="arcade-cabinet" data-game-id="${game.id}">
-                <div class="cabinet-screen">
-                    <img 
-                        src="../${game.thumbnail}" 
-                        alt="${game.title}"
-                        loading="lazy"
-                    >
-                    <button class="play-btn" data-game-slug="${game.slug}">PLAY NOW</button>
-                </div>
-                <div class="cabinet-title neon-text">${game.title}</div>
-                <div class="cabinet-controls">
-                    <div class="control-btn red"></div>
-                    <div class="control-btn blue"></div>
-                    <div class="control-btn green"></div>
-                    <div class="control-btn yellow"></div>
-                </div>
-            </div>
-            `;
-        });
-        
-        gamesContainer.innerHTML = html;
-        
-        // 添加游戏卡片点击事件
-        addGameCardEvents();
-        
     } catch (error) {
         console.error('Error loading category games:', error);
         const gamesContainer = document.getElementById('category-games');
         if (gamesContainer) {
-            gamesContainer.innerHTML = '<div class="col-span-full text-center py-8 text-red-500">Failed to load games. Please try again later.</div>';
+            gamesContainer.innerHTML = '<div class="col-span-full text-center py-8 text-red-500">加载游戏失败。请稍后再试。</div>';
         }
     }
+}
+
+// 分离显示游戏的逻辑到单独的函数
+function displayGames(categoryGames) {
+    const gamesContainer = document.getElementById('category-games');
+    if (!gamesContainer) {
+        console.error('Category games container not found');
+        return;
+    }
+    
+    if (categoryGames.length === 0) {
+        gamesContainer.innerHTML = '<div class="col-span-full text-center py-8">该分类暂无游戏</div>';
+        return;
+    }
+    
+    let html = '';
+    categoryGames.forEach(game => {
+        // 确保图片路径正确
+        const thumbnailPath = game.thumbnail.startsWith('/') ? game.thumbnail.substring(1) : game.thumbnail;
+        
+        html += `
+        <div class="arcade-cabinet" data-game-id="${game.id}">
+            <div class="cabinet-screen">
+                <img 
+                    src="../${thumbnailPath}" 
+                    alt="${game.title}"
+                    loading="lazy"
+                    onerror="this.onerror=null; this.src='../assets/images/placeholder.jpg';"
+                >
+                <button class="play-btn" data-game-slug="${game.slug}">PLAY NOW</button>
+            </div>
+            <div class="cabinet-title neon-text">${game.title}</div>
+            <div class="cabinet-controls">
+                <div class="control-btn red"></div>
+                <div class="control-btn blue"></div>
+                <div class="control-btn green"></div>
+                <div class="control-btn yellow"></div>
+            </div>
+        </div>
+        `;
+    });
+    
+    gamesContainer.innerHTML = html;
+    
+    // 添加游戏卡片点击事件
+    addGameCardEvents();
 }
 
 // 添加游戏卡片点击事件
@@ -99,4 +113,3 @@ document.addEventListener('DOMContentLoaded', function() {
             if (coinSound) {
                 coinSound.currentTime = 0;
                 coinSound.play();
-            }
