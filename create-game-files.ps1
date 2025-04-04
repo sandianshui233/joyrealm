@@ -130,10 +130,9 @@ foreach ($category in $categories) {
     # 移除末尾的换行和空格
     $gamesHtml = $gamesHtml.TrimEnd()
     
-    # 使用正则表达式替换游戏列表部分
-    $pattern = '(?s)<div id="category-games" class="arcade-machines category-games">.*?</div>'
-    $replacement = "<div id=`"category-games`" class=`"arcade-machines category-games`">`n$gamesHtml`n            </div>"
-    $updatedHtml = [Regex]::Replace($categoryHtml, $pattern, $replacement)
+    # 不修改HTML结构，依赖JavaScript动态加载游戏列表
+    Write-Host "  Category page structure preserved. Games will be loaded via JavaScript."
+    $updatedHtml = $categoryHtml
     
     # 写回分类页面
     $updatedHtml | Set-Content $categoryHtmlPath -Encoding UTF8

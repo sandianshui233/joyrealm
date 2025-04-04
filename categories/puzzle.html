@@ -1,148 +1,87 @@
-﻿@ -18,13 +18,14 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Games - JoyRealm</title>
+    <meta name="description" content="Explore exciting puzzle games on JoyRealm - Challenge your mind with brain teasers, logic puzzles and strategic thinking.">
+    <link rel="canonical" href="https://joyrealm.org/categories/puzzle.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/arcade.css?v=1.0.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B41L93ERM8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-B41L93ERM8');
-    </script></head>
     </script>
 </head>
 
 <body class="arcade-body">
-    <!-- CRT灞忓箷鏁堟灉瑕嗙洊灞?-->
     <!-- CRT屏幕效果覆盖层 -->
     <div class="crt-overlay"></div>
     
-    <!-- 澶撮儴 -->
     <!-- 头部 -->
     <header class="arcade-header">
         <div class="logo-container">
             <a href="/" class="arcade-logo">
-@ -44,7 +45,7 @@
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </a>
+        </div>
+        <nav class="arcade-nav">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/categories/action.html" class="nav-btn">Action</a>
+            <a href="/categories/puzzle.html" class="nav-btn active">Puzzle</a>
+            <a href="/categories/music.html" class="nav-btn">Music</a>
+        </nav>
+        <div class="coin-slot">
+            <button class="insert-coin-btn">INSERT COIN</button>
+            <div class="coin-counter">CREDITS: 0</div>
+        </div>
     </header>
     
     <main class="arcade-hall">
-        <!-- 绫诲埆鏍囬 -->
         <!-- 类别标题 -->
         <section class="category-header">
             <h1 class="category-title neon-green">PUZZLE GAMES</h1>
             <p class="category-description">
-@ -53,10 +54,10 @@
+                Challenge your mind with our collection of puzzle games. 
+                Solve complex problems, test your logic and enjoy strategic thinking in these brain-teasing adventures.
             </p>
         </section>
         
-        <!-- 娓告垙鍒楄〃 -->
         <!-- 游戏列表 -->
         <section class="games-grid">
             <div id="category-games" class="arcade-machines category-games">
-                <!-- Power Light 娓告垙鍗＄墖 -->
-                <!-- Power Light 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="5">
-                    <div class="cabinet-screen">
-                        <img 
-@ -74,20 +75,17 @@
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- 
-Dynamons Connect 娓告垙鍗＄墖 -->
-                <!-- Dynamons Connect 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="10">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/das.jpg" 
-                            alt="
-Dynamons Connect"
-                            alt="Dynamons Connect"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="dynamons-connect">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">
-Dynamons Connect</div>
-                    <div class="cabinet-title neon-text">Dynamons Connect</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-@ -95,7 +93,7 @@ Dynamons Connect</div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Daily Sudoku 娓告垙鍗＄墖 -->
-                <!-- Daily Sudoku 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="11">
-                    <div class="cabinet-screen">
-                        <img 
-@ -113,7 +111,7 @@ Dynamons Connect</div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- WorldCraft 2 娓告垙鍗＄墖 -->
-                <!-- WorldCraft 2 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="12">
-                    <div class="cabinet-screen">
-                        <img 
-@ -131,42 +129,6 @@ Dynamons Connect</div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Power Light</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Power Light</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Power Light</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Power Light</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
+                <!-- 游戏卡片将通过JavaScript动态加载 -->
             </div>
         </section>
     </main>
-@ -176,7 +138,7 @@ Dynamons Connect</div>
+    
+    <footer class="arcade-footer">
+        <div class="footer-content">
             <div class="footer-logo">
                 <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
             </div>
-            <p class="copyright">漏 2023 Joyrealm. All rights reserved.</p>
             <p class="copyright">© 2023 Joyrealm. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
-@ -185,11 +147,11 @@ Dynamons Connect</div>
+                <a href="#">Contact</a>
+            </div>
         </div>
     </footer>
     
-    <!-- 闊虫晥璧勬簮 -->
     <!-- 音效资源 -->
     <audio id="coin-sound" src="../assets/sounds/coin.mp3" preload="auto"></audio>
     <audio id="button-sound" src="../assets/sounds/button-press.mp3" preload="auto"></audio>
     
-    <!-- 鑴氭湰 -->
     <!-- 脚本 -->
     <script src="../assets/js/arcade-effects.js"></script>
     <script src="../assets/js/category.js"></script>
 </body>
+</html>

@@ -1,292 +1,87 @@
-﻿@ -21,10 +21,10 @@
-    </script></head>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Games - JoyRealm</title>
+    <meta name="description" content="Explore exciting action games on JoyRealm - Experience the thrill of fast-paced gameplay and adventure.">
+    <link rel="canonical" href="https://joyrealm.org/categories/action.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/arcade.css?v=1.0.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B41L93ERM8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-B41L93ERM8');
+    </script>
+</head>
 
 <body class="arcade-body">
-    <!-- CRT灞忓箷鏁堟灉瑕嗙洊灞?-->
     <!-- CRT屏幕效果覆盖层 -->
     <div class="crt-overlay"></div>
     
-    <!-- 澶撮儴 -->
     <!-- 头部 -->
     <header class="arcade-header">
         <div class="logo-container">
             <a href="/" class="arcade-logo">
-@ -44,7 +44,7 @@
+                <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
+            </a>
+        </div>
+        <nav class="arcade-nav">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/categories/action.html" class="nav-btn active">Action</a>
+            <a href="/categories/puzzle.html" class="nav-btn">Puzzle</a>
+            <a href="/categories/music.html" class="nav-btn">Music</a>
+        </nav>
+        <div class="coin-slot">
+            <button class="insert-coin-btn">INSERT COIN</button>
+            <div class="coin-counter">CREDITS: 0</div>
+        </div>
     </header>
     
     <main class="arcade-hall">
-        <!-- 绫诲埆鏍囬 -->
         <!-- 类别标题 -->
         <section class="category-header">
             <h1 class="category-title neon-green">ACTION GAMES</h1>
             <p class="category-description">
-@ -53,10 +53,10 @@
+                Experience the thrill of fast-paced gameplay with our collection of action games. 
+                Test your reflexes and skills in these exciting adventures.
             </p>
         </section>
         
-        <!-- 娓告垙鍒楄〃 -->
         <!-- 游戏列表 -->
         <section class="games-grid">
             <div id="category-games" class="arcade-machines category-games">
-                <!-- Funny Walk Fail Runr 娓告垙鍗＄墖 -->
-                <!-- Funny Walk Fail Runr 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="1">
-                    <div class="cabinet-screen">
-                        <img 
-@ -74,7 +74,7 @@
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Vex X3Mr 娓告垙鍗＄墖 -->
-                <!-- Vex X3Mr 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="2">
-                    <div class="cabinet-screen">
-                        <img 
-@ -92,7 +92,7 @@
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Nuclear Day Survival 娓告垙鍗＄墖 -->
-                <!-- Nuclear Day Survival 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="4">
-                    <div class="cabinet-screen">
-                        <img 
-@ -110,7 +110,7 @@
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Draw War 娓告垙鍗＄墖 -->
-                <!-- Draw War 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="7">
-                    <div class="cabinet-screen">
-                        <img 
-@ -128,7 +128,7 @@
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Army Commander Craft 娓告垙鍗＄墖 -->
-                <!-- Army Commander Craft 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="8">
-                    <div class="cabinet-screen">
-                        <img 
-@ -146,7 +146,7 @@
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- War State IO - Conquer Battles 娓告垙鍗＄墖 -->
-                <!-- War State IO - Conquer Battles 游戏卡片 -->
-                <div class="arcade-cabinet" data-game-id="9">
-                    <div class="cabinet-screen">
-                        <img 
-@ -164,188 +164,6 @@
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Funny Walk Fail Runr</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Vex X3Mr 娓告垙鍗＄墖 -->
-                <div class="arcade-cabinet" data-game-id="2">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/vx.jpg" 
-                            alt="Vex X3Mr"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="vex-x3mr">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">Vex X3Mr</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Nuclear Day Survival 娓告垙鍗＄墖 -->
-                <div class="arcade-cabinet" data-game-id="4">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/nds.jpg" 
-                            alt="Nuclear Day Survival"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="nuclear-day-survival">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">Nuclear Day Survival</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Funny Walk Fail Runr</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Vex X3Mr 娓告垙鍗＄墖 -->
-                <div class="arcade-cabinet" data-game-id="2">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/vx.jpg" 
-                            alt="Vex X3Mr"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="vex-x3mr">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">Vex X3Mr</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Nuclear Day Survival 娓告垙鍗＄墖 -->
-                <div class="arcade-cabinet" data-game-id="4">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/nds.jpg" 
-                            alt="Nuclear Day Survival"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="nuclear-day-survival">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">Nuclear Day Survival</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Funny Walk Fail Runr</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Vex X3Mr 娓告垙鍗＄墖 -->
-                <div class="arcade-cabinet" data-game-id="2">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/vx.jpg" 
-                            alt="Vex X3Mr"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="vex-x3mr">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">Vex X3Mr</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                                <!-- Nuclear Day Survival 娓告垙鍗＄墖 -->
-                <div class="arcade-cabinet" data-game-id="4">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/nds.jpg" 
-                            alt="Nuclear Day Survival"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="nuclear-day-survival">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">Nuclear Day Survival</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Funny Walk Fail Runr</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                
-                <!-- Vex X3Mr 娓告垙鍗＄墖 -->
-                <div class="arcade-cabinet" data-game-id="2">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/vx.jpg" 
-                            alt="Vex X3Mr"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="vex-x3mr">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">Vex X3Mr</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                
-                <!-- Nuclear Day Survival 娓告垙鍗＄墖 -->
-                <div class="arcade-cabinet" data-game-id="4">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="../assets/images/games/nds.jpg" 
-                            alt="Nuclear Day Survival"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="nuclear-day-survival">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">Nuclear Day Survival</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
+                <!-- 游戏卡片将通过JavaScript动态加载 -->
             </div>
         </section>
     </main>
-@ -355,7 +173,7 @@
+    
+    <footer class="arcade-footer">
+        <div class="footer-content">
             <div class="footer-logo">
                 <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
             </div>
-            <p class="copyright">漏 2023 Joyrealm. All rights reserved.</p>
             <p class="copyright">© 2023 Joyrealm. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
-@ -364,11 +182,11 @@
+                <a href="#">Contact</a>
+            </div>
         </div>
     </footer>
     
-    <!-- 闊虫晥璧勬簮 -->
     <!-- 音效资源 -->
     <audio id="coin-sound" src="../assets/sounds/coin.mp3" preload="auto"></audio>
     <audio id="button-sound" src="../assets/sounds/button-press.mp3" preload="auto"></audio>
     
-    <!-- 鑴氭湰 -->
     <!-- 脚本 -->
     <script src="../assets/js/arcade-effects.js"></script>
     <script src="../assets/js/category.js"></script>
 </body>
+</html>
