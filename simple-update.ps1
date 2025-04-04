@@ -1,4 +1,7 @@
 # 简化版CSV转JSON脚本
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+
 Write-Host "开始处理CSV数据..."
 
 # 检查CSV文件是否存在
