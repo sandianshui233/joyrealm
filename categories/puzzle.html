@@ -18,13 +18,14 @@
       gtag('js', new Date());
 
       gtag('config', 'G-B41L93ERM8');
-    </script></head>
+    </script>
+</head>
 
 <body class="arcade-body">
-    <!-- CRT灞忓箷鏁堟灉瑕嗙洊灞?-->
+    <!-- CRT屏幕效果覆盖层 -->
     <div class="crt-overlay"></div>
     
-    <!-- 澶撮儴 -->
+    <!-- 头部 -->
     <header class="arcade-header">
         <div class="logo-container">
             <a href="/" class="arcade-logo">
@@ -44,7 +45,7 @@
     </header>
     
     <main class="arcade-hall">
-        <!-- 绫诲埆鏍囬 -->
+        <!-- 类别标题 -->
         <section class="category-header">
             <h1 class="category-title neon-green">PUZZLE GAMES</h1>
             <p class="category-description">
@@ -53,10 +54,10 @@
             </p>
         </section>
         
-        <!-- 娓告垙鍒楄〃 -->
+        <!-- 游戏列表 -->
         <section class="games-grid">
             <div id="category-games" class="arcade-machines category-games">
-                <!-- Power Light 娓告垙鍗＄墖 -->
+                <!-- Power Light 游戏卡片 -->
                 <div class="arcade-cabinet" data-game-id="5">
                     <div class="cabinet-screen">
                         <img 
@@ -74,20 +75,17 @@
                         <div class="control-btn yellow"></div>
                     </div>
                 </div>
-                                <!-- 
-Dynamons Connect 娓告垙鍗＄墖 -->
+                <!-- Dynamons Connect 游戏卡片 -->
                 <div class="arcade-cabinet" data-game-id="10">
                     <div class="cabinet-screen">
                         <img 
                             src="../assets/images/games/das.jpg" 
-                            alt="
-Dynamons Connect"
+                            alt="Dynamons Connect"
                             loading="lazy"
                         >
                         <button class="play-btn" data-game-slug="dynamons-connect">PLAY NOW</button>
                     </div>
-                    <div class="cabinet-title neon-text">
-Dynamons Connect</div>
+                    <div class="cabinet-title neon-text">Dynamons Connect</div>
                     <div class="cabinet-controls">
                         <div class="control-btn red"></div>
                         <div class="control-btn blue"></div>
@@ -95,7 +93,7 @@ Dynamons Connect</div>
                         <div class="control-btn yellow"></div>
                     </div>
                 </div>
-                                <!-- Daily Sudoku 娓告垙鍗＄墖 -->
+                <!-- Daily Sudoku 游戏卡片 -->
                 <div class="arcade-cabinet" data-game-id="11">
                     <div class="cabinet-screen">
                         <img 
@@ -113,7 +111,7 @@ Dynamons Connect</div>
                         <div class="control-btn yellow"></div>
                     </div>
                 </div>
-                                <!-- WorldCraft 2 娓告垙鍗＄墖 -->
+                <!-- WorldCraft 2 游戏卡片 -->
                 <div class="arcade-cabinet" data-game-id="12">
                     <div class="cabinet-screen">
                         <img 
@@ -132,42 +130,6 @@ Dynamons Connect</div>
                     </div>
                 </div>
             </div>
-                    <div class="cabinet-title neon-text">Power Light</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Power Light</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Power Light</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
-                    <div class="cabinet-title neon-text">Power Light</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
     
@@ -176,7 +138,7 @@ Dynamons Connect</div>
             <div class="footer-logo">
                 <span class="neon-yellow">Joy</span><span class="neon-pink">Realm</span>
             </div>
-            <p class="copyright">漏 2023 Joyrealm. All rights reserved.</p>
+            <p class="copyright">© 2023 Joyrealm. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
@@ -185,11 +147,11 @@ Dynamons Connect</div>
         </div>
     </footer>
     
-    <!-- 闊虫晥璧勬簮 -->
+    <!-- 音效资源 -->
     <audio id="coin-sound" src="../assets/sounds/coin.mp3" preload="auto"></audio>
     <audio id="button-sound" src="../assets/sounds/button-press.mp3" preload="auto"></audio>
     
-    <!-- 鑴氭湰 -->
+    <!-- 脚本 -->
     <script src="../assets/js/arcade-effects.js"></script>
     <script src="../assets/js/category.js"></script>
 </body>
