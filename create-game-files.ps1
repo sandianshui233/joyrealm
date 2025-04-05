@@ -150,13 +150,13 @@ foreach ($category in $categories) {
     # 确保分类页面只包含空的游戏容器
     Write-Host "  Category page structure preserved. Games will be loaded via JavaScript."
     
-    # 检查是否需要更新页面结构，确保只有一个空的游戏容器
+    # 检查页面结构是否正确
     if ($categoryHtml -match "<!-- 游戏卡片将通过JavaScript动态加载 -->") {
         Write-Host "  Category page already has the correct structure."
     } else {
-        # 如果页面结构不正确，可以考虑更新它
-        # 但这里我们选择不修改现有页面，只确保新页面有正确的结构
-        Write-Host "  Note: Existing category page structure maintained."
+        # 替换为正确的动态加载结构
+        $categoryHtml = $categoryHtml -replace "(?s)<div class=\"arcade-machines\">.*?</div>", "<div id=`"category-games`" class=`"arcade-machines`"><!-- 游戏将通过JavaScript动态加载 --></div>"
+        $categoryHtml | Set-Content $categoryHtmlPath -Encoding UTF8
     }
     
     # 写回分类页面（如果有修改）
