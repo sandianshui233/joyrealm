@@ -66,6 +66,7 @@ async function loadFeaturedGames() {
 }
 
 // 加载分类游戏
+// 在loadCategoryGames函数中，修改游戏加载逻辑
 async function loadCategoryGames() {
     try {
         // 加载游戏数据
@@ -76,65 +77,41 @@ async function loadCategoryGames() {
         
         const games = await response.json();
         
-        // 获取所有分类容器
-        const categoryRows = document.querySelectorAll('.category-row');
+        // 获取分类容器并加载游戏
+        const categoryContainers = {
+            'Action': document.getElementById('action-games-container'),
+            'Puzzle': document.getElementById('puzzle-games-container'),
+            'Music': document.getElementById('music-games-container')
+        };
         
-        categoryRows.forEach(row => {
-            const categoryTitle = row.querySelector('.category-title').textContent.trim().toLowerCase();
-            const category = categoryTitle.split(' ')[0].toLowerCase();
+        // 为每个分类加载游戏
+        Object.keys(categoryContainers).forEach(category => {
+            const container = categoryContainers[category];
+            if (!container) return;
             
-            // 过滤该分类的游戏
-            const categoryGames = games.filter(game => game.category.toLowerCase() === category);
+            // 清空容器
+            container.innerHTML = '';
             
-            const gamesContainer = row.querySelector('.arcade-machines');
-            if (!gamesContainer) {
-                console.error(`Games container for ${category} not found`);
-                return;
-            }
+            // 过滤该分类的游戏并限制数量
+            const categoryGames = games
+                .filter(game => game.category === category)
+                .slice(0, 4); // 每个分类最多显示4个游戏
             
+            // 如果没有游戏，显示提示信息
             if (categoryGames.length === 0) {
-                gamesContainer.innerHTML = '<div class="col-span-full text-center py-4">No games available in this category</div>';
+                container.innerHTML = '<p class="no-games">No games found in this category</p>';
                 return;
             }
             
-            // 只显示前3个游戏
-            const displayGames = categoryGames.slice(0, 3);
-            
-            let html = '';
-            displayGames.forEach(game => {
-                html += `
-                <div class="arcade-cabinet" data-game-id="${game.id}">
-                    <div class="cabinet-screen">
-                        <img 
-                            src="${game.thumbnail}" 
-                            alt="${game.title}"
-                            loading="lazy"
-                        >
-                        <button class="play-btn" data-game-slug="${game.slug}">PLAY NOW</button>
-                    </div>
-                    <div class="cabinet-title neon-text">${game.title}</div>
-                    <div class="cabinet-controls">
-                        <div class="control-btn red"></div>
-                        <div class="control-btn blue"></div>
-                        <div class="control-btn green"></div>
-                        <div class="control-btn yellow"></div>
-                    </div>
-                </div>
-                `;
+            // 添加游戏卡片
+            categoryGames.forEach(game => {
+                const gameCard = createGameCard(game);
+                container.appendChild(gameCard);
             });
-            
-            gamesContainer.innerHTML = html;
         });
-        
-        // 添加游戏卡片点击事件
-        addGameCardEvents();
         
     } catch (error) {
         console.error('Error loading category games:', error);
-        const categoryContainers = document.querySelectorAll('.arcade-machines');
-        categoryContainers.forEach(container => {
-            container.innerHTML = '<div class="col-span-full text-center py-4 text-red-500">Failed to load games. Please try again later.</div>';
-        });
     }
 }
 
