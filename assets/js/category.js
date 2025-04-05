@@ -5,8 +5,11 @@ let gamesLoaded = false;
 
 // 加载分类游戏
 async function loadCategoryGames() {
+    console.log("loadCategoryGames被调用，gamesLoaded =", gamesLoaded);
+    
     // 如果已经加载过游戏，则不再重复加载
     if (gamesLoaded) {
+        console.log("游戏已加载，跳过");
         return;
     }
     
@@ -15,7 +18,14 @@ async function loadCategoryGames() {
         const currentPath = window.location.pathname;
         const categorySlug = currentPath.split('/').pop().replace('.html', '');
         
-        console.log("正在加载分类:", categorySlug); // 调试信息
+        console.log("正在加载分类:", categorySlug);
+        
+        // 简化清理逻辑，直接清空游戏容器
+        const categoryGamesContainer = document.getElementById('category-games');
+        if (categoryGamesContainer) {
+            categoryGamesContainer.innerHTML = '';
+            console.log("已清空游戏容器");
+        }
         
         // 清理页面上可能存在的静态游戏元素
         cleanupStaticGameElements();
@@ -136,8 +146,13 @@ function addGameCardEvents() {
 }
 
 // 页面加载完成后执行
+// 页面加载完成后执行
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM已加载，准备初始化分类页面"); // 调试信息
+    console.log("DOM已加载，准备初始化分类页面");
+    
+    // 检查是否已有游戏卡片
+    const existingCards = document.querySelectorAll('.arcade-cabinet');
+    console.log("页面加载时已存在的游戏卡片数量:", existingCards.length);
     
     // 加载分类游戏
     loadCategoryGames();
