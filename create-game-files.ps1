@@ -46,13 +46,19 @@ foreach ($game in $games) {
         $gameHtml = $gameHtml -replace "(?s)(<head>.*?)(?=</head>)", "`$1`n$gaCode"
     }
     
-    # 修改第49-53行
-    # 修复的游戏容器替换 - 确保只替换一次
+    # 修复的游戏容器替换 - 确保替换所有实例
     if ($gameHtml -match '<div class="arcade-machines">') {
         $gameHtml = $gameHtml -replace '<div class="arcade-machines">', '<div id="category-games">'
         Write-Host "  替换了游戏容器标签"
     }
     
+    # 检查并删除可能的重复游戏框架
+    if ($gameHtml -match '<div class="related-games">') {
+        # 确保相关游戏部分只有一个游戏容器
+        $gameHtml = $gameHtml -replace '(<div class="related-games-grid">)[\s\S]*?(</div>\s*</div>\s*</div>)', '$1<!-- 相关游戏将通过JavaScript动态加载 -->$2'
+        Write-Host "  清理了相关游戏区域"
+    }
+
     $gamePath = "games\$($game.slug).html"
     $gameHtml | Set-Content $gamePath -Encoding UTF8
     Write-Host "  Page created: $gamePath"

@@ -1,7 +1,16 @@
 // 游戏详情页脚本
 
+// 全局变量，防止重复加载
+let relatedGamesLoaded = false;
+
 // 加载相关游戏
 async function loadRelatedGames() {
+    // 如果已经加载过，则不再重复加载
+    if (relatedGamesLoaded) {
+        console.log("相关游戏已加载，跳过");
+        return;
+    }
+    
     try {
         // 获取当前游戏slug
         const currentPath = window.location.pathname;
@@ -29,6 +38,9 @@ async function loadRelatedGames() {
             return;
         }
         
+        // 清空容器，确保不会重复添加
+        relatedContainer.innerHTML = '';
+        
         if (relatedGames.length === 0) {
             relatedContainer.innerHTML = '<p class="text-center py-4">No related games found</p>';
             return;
@@ -52,6 +64,9 @@ async function loadRelatedGames() {
         });
         
         relatedContainer.innerHTML = html;
+        
+        // 标记已加载
+        relatedGamesLoaded = true;
     } catch (error) {
         console.error('Error loading related games:', error);
         const relatedContainer = document.querySelector('.related-games-grid');
@@ -60,6 +75,36 @@ async function loadRelatedGames() {
         }
     }
 }
+
+// 确保DOM加载完成后再执行
+document.addEventListener('DOMContentLoaded', function() {
+    // 初始化游戏懒加载
+    if (typeof setupGameLazyLoading === 'function') {
+        setupGameLazyLoading();
+    }
+    
+    // 加载相关游戏
+    loadRelatedGames();
+    
+    // 添加投币按钮事件
+    const insertCoinBtn = document.getElementById('insert-coin-game');
+    if (insertCoinBtn) {
+        insertCoinBtn.addEventListener('click', function() {
+            const coinSound = document.getElementById('coin-sound');
+            if (coinSound) {
+                coinSound.currentTime = 0;
+                coinSound.play();
+            }
+            
+            // 增加信用点数
+            const creditCounter = document.querySelector('.coin-counter');
+            if (creditCounter) {
+                const currentCredits = parseInt(creditCounter.textContent.replace('CREDITS: ', ''));
+                creditCounter.textContent = `CREDITS: ${currentCredits + 1}`;
+            }
+        });
+    }
+});
 
 // 街机控制互动效果
 function setupArcadeControls() {
