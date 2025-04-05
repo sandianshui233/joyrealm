@@ -3,6 +3,21 @@
 // 加载分类游戏
 async function loadCategoryGames() {
     try {
+        // 检查是否已经有静态内容
+        const gamesContainer = document.getElementById('category-games');
+        if (!gamesContainer) {
+            console.error('Category games container not found');
+            return;
+        }
+        
+        // 如果容器中已有游戏卡片，则不再加载
+        if (gamesContainer.querySelectorAll('.arcade-cabinet').length > 0) {
+            console.log('静态游戏卡片已存在，跳过动态加载');
+            // 仍然添加事件处理
+            addGameCardEvents();
+            return;
+        }
+        
         // 获取当前分类
         const currentPath = window.location.pathname;
         const categorySlug = currentPath.split('/').pop().replace('.html', '');
