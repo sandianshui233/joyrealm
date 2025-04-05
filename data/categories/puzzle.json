@@ -16,7 +16,7 @@
         "slug":  "dynamons-connect",
         "category":  "puzzle",
         "description":  "Dive into the exciting world of Dynamons Connect! This fun and engaging game with adorable, colorful characters helps improve focus and visual perception. Match identical tiles by connecting them with a path that has no more than two turns to clear the board. With endless levels, the challenge never stops!",
-        "thumbnail":  "assets/images/games/das.jpg",
+        "thumbnail":  "assets/images/games/dyc.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/c0b15af1bba044849416d45a56b481f4/?gd_sdk_referrer_url=https://gamedistribution.com/games/dynamons-connect/",
         "controls":  "? Find two matching tiles and connect them with a path that has no more than two 90-degree angles. ? Clear the board before time runs out! ? Choose between two difficulty modes for the best experience. ? Keep playing as long as you want??unlimited levels mean unlimited fun!",
         "featured":  "TRUE"
@@ -27,7 +27,7 @@
         "slug":  "daily-sudoku",
         "category":  "puzzle",
         "description":  "Daily Sudoku provides a thought-provoking journey that will keep you engrossed until every puzzle box is filled. If you enjoy challenging your intellect and sharpening your problem-solving skills, then you\u0027ve come to the perfect spot.",
-        "thumbnail":  "assets/images/games/wo2.jpg",
+        "thumbnail":  "assets/images/games/das.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/dd9701cd84da40699cdc404645f29c1f/?gd_sdk_referrer_url=https://gamedistribution.com/games/daily-sudoku-2/",
         "controls":  "The game\u0027s aim is to solve every row, column, and square without repeating numbers one through nine. Ultimately, the objective is to make sure that each row, column, and square contains the numbers one through nine without any duplicates, delivering an exceptional puzzle experience that demands concentration and perseverance.",
         "featured":  "TRUE"
@@ -38,7 +38,7 @@
         "slug":  "worldCraft-2",
         "category":  "puzzle",
         "description":  "If you are a craft master. World Craft winter exploration ready for you. Show your skills craft your cubes and build cities, garden, your own house call your friends. Play with your friends new adventures. Features - Crafting cube - Graphics Improved - New worlds",
-        "thumbnail":  "assets/images/games/srnhv.jpg",
+        "thumbnail":  "assets/images/games/wo2.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/5ab6c0365d0e44ff834bb2084fddf0b5/?gd_sdk_referrer_url=https://gamedistribution.com/games/worldcraft-2/",
         "controls":  "Movement: W A S D Destruction : Left Click Build : Right Click Exit : Escape",
         "featured":  "TRUE"

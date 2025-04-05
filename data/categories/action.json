@@ -38,7 +38,7 @@
         "slug":  "draw-war",
         "category":  "action",
         "description":  "Unleash your creativity in Draw War. This is a wonderful strategy game. Here drawing meets battles. Build a hero lineup, draw your legions, then unleash the power of your army. The numbers show the soldiers summoned. Click to send Shielded Soldiers, Soldiers on Horseback, or Super Beasts.",
-        "thumbnail":  "assets/images/games/acc.jpg",
+        "thumbnail":  "assets/images/games/dw.png",
         "embedSrc":  "https://html5.gamedistribution.com/5fb9b774831843009ff37110468373d9/?gd_sdk_referrer_url=https://gamedistribution.com/games/draw-war/",
         "controls":  "Mouse click or tap to play",
         "featured":  "TRUE"
@@ -60,7 +60,7 @@
         "slug":  "war-state-io-conquer-battles",
         "category":  "action",
         "description":  "Welcome to ultimate strategy game that lets you improve your tactical skills and lead your troops to triumph! Lead your army, conquer enemy camps, and expand your territory in fast-paced battles filled with action and strategy. Every decision matters ?? whether you??re attacking enemy strongholds or defending your bases, clever maneuvers are key to achieving victory.",
-        "thumbnail":  "assets/images/games/dyc.jpg",
+        "thumbnail":  "assets/images/games/wsicb.jpg",
         "embedSrc":  "https://html5.gamedistribution.com/e1e486c81b0c4d738d4c1a05204f99c2/?gd_sdk_referrer_url=https://gamedistribution.com/games/war-state-io-conquer-battles/",
         "controls":  "Drag your troops with your mouse/finger to the building you want to occupy. Occupy all enemy buildings to win.",
         "featured":  "FALSE"
